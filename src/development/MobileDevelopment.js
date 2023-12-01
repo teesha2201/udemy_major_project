@@ -31,7 +31,7 @@ const MobileDevelopment  = ()=>{
                 <div className="web_cardrow1">
                                     <div className="web_cardParent1">
                                         
-                                        {web.filter((item,index)=>(item.id===30)).map((item,index)=>{
+                                        {web.filter((item,index)=>(item.id===65)).map((item,index)=>{
                                         return(
                                             <div key={index} className="web_cardContainer2">
                                             
@@ -112,7 +112,7 @@ const MobileDevelopment  = ()=>{
                                     </div> 
                                     <div className="web_cardParent1">
                                         
-                                        {web.filter((item,index)=>(item.id===31)).map((item,index)=>{
+                                        {web.filter((item,index)=>(item.id===66)).map((item,index)=>{
                                         return(
                                             <div key={index} className="web_cardContainer2">
                                             
@@ -193,7 +193,7 @@ const MobileDevelopment  = ()=>{
                                     </div> 
                                     <div className="web_cardParent1">
                                         
-                                        {web.filter((item,index)=>(item.id===32)).map((item,index)=>{
+                                        {web.filter((item,index)=>(item.id===67)).map((item,index)=>{
                                         return(
                                             <div key={index} className="web_cardContainer2">
                                             
@@ -274,7 +274,7 @@ const MobileDevelopment  = ()=>{
                                     </div> 
                                     <div className="web_cardParent1">
                                         
-                                        {web.filter((item,index)=>(item.id===33)).map((item,index)=>{
+                                        {web.filter((item,index)=>(item.id===68)).map((item,index)=>{
                                         return(
                                             <div key={index} className="web_cardContainer2">
                                             
@@ -557,7 +557,7 @@ const MobileDevelopment  = ()=>{
                 {/* coloumnwise card */}
                <div>
                <div className="webcardparent">
-                        {web.filter((item)=>(item.id>33) && (item.id<37)).map((item,index)=>{
+                        {web.filter((item)=>(item.id>68) && (item.id<72)).map((item,index)=>{
                             return(
                                 <>
                                         <div className="webcard_row">
