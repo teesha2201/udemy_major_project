@@ -443,33 +443,33 @@ row-gap: 2vw;
 /* Rating */
 
 .webcardcontainer_parent{
-    border: 2px solid gray;
-    margin:3%;  
-}
-.wedinnerCover{
     display: flex;
-    justify-content: ;
+    justify-content: space-evenly;
+    /* border: 2px solid gray; */
+    margin-top:3%;  
+    width:100%;
+}
+.webinnerCover{
+    display: flex;
+    /* justify-content: ; */
     align-items: center;
-    width: 100%;
+
+    border:2px solid red;
     
 }
 .webcardcontainer{
     width:80%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    /* justify-content: center; */
-     /* align-items: center; */
+    justify-content: center;
+
 }
 .rating_div_coloumn{
-
     width:30%;
     display: flex;
     flex-direction: column;
     row-gap: 2vw;
-    border:2px solid black;
-   
-
+    border:10px solid white;
 }
 .rating_div_coloumn .textrating{
     display: flex;
@@ -502,41 +502,88 @@ row-gap: 2vw;
 .rating_div_row b{
     color: rgb(144, 143, 143);
 }
-.webcardparent{
+.webcardparent , .webcardlast{
     display: flex;
     flex-direction: column;
-    width:90%;
-
-    /* row-gap: 2vw; */
+    width:100%;
+   
+    /* border:10px solid rgb(175, 74, 74); */
 }
 .webcard_row{
     /* width:90%; */
-    border:2px solid black;
+    border-bottom:2px solid gray;
     display: flex;
     flex-direction: row;
-    /* column-gap: 4vh; */
-    /* justify-content: space-evenly; */
-    /* justify-content: space-between; */
-    /* position: relative; */
+    justify-content: space-between;
+    position: relative;
+    column-gap: 4vh;
+    
 }
 .webimg{
-    width:50%;
-    border:2px solid black;
+    width:25vw;
+    border:10px solid white;
     height: auto;
+
 }
+.webimg img{
+    width:100%;
+    height: 96%;
+    border:10px solid rgb(254, 253, 253);
+}
+
 .webcarddetail{
     width:80%;
+    border:10px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* row-gap: 2vw; */
+    
+}
+.webcarddetail .row1 {
+    width:90%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.webcarddetail .row1 span
+{ 
+    
+    font-weight: bold;
+    color:black;
+}
+.ratingtext , .totalhrs{
+   
+    font-size:14px;
+}
+.ratingtext{
+    color:black;
+    font-weight: bold;
+}
+.webcarddetail .rating{
+    color:orange;
+}
+.bestseller{
+    background-color: rgb(225, 225, 164);
+}
+/* .row2{
+    width:28%;
     border:2px solid black;
+} */
+.webcardhovercontainer{
+    border:10px solid white;
+    width:28vw;
 }
 .webcardhover{
-    width:70%;
-    min-height: 40vh;
-    /* border:2px solid black; */
+    width:26vw;
+    /* min-height: 40vh; */
     display: none;
     position: absolute;
-    bottom:24vh;
-    left: 30%;
+    bottom:28vh;
+    left: 40%;
     z-index: 4;
+    background-color: white;
 }
  .webcard_row:hover  .webcardhover{
     display: block;
@@ -545,15 +592,78 @@ row-gap: 2vw;
  .wedcardhoverdetail{
     display: flex;
     flex-direction: column;
-    border:2px solid gray;
+    border:1px solid lightgray;
+    border-radius: 1%;
     row-gap: 2vw;
+    background-color: white;
+    justify-content: flex-start;
+    align-items: flex-start;
 
  }
  .keypoint{
-    text-align: center;
+    text-align: left;
+    font-size: 14px;
+
  }
  .webpoints{
     display: flex;
+    flex-direction: row;
+    column-gap: 3vh;
+ }
+ .webhoveraddtocart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%
+    /* align-items: center; */
+}
+.webaddtocartbutton{
+    color:white;
+    font-size: 16px;
+    width:18vw;
+    height: 6vh;
+    background-color: rgb(147, 45, 202);
+}
+.webwishlist{
+    width:3vw;
+    height: 6vh;
+    border-radius: 50%;
+    border: 2px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color:black ;
+   
+}
+.fa-regular fa-heart{
+    font-size: larger;
+ }
+
+ .webcardparent .ads{
+    width:100%;
+    height: 30vh;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2vh;
+
+ }
+ .ads .row1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+ .ads div h2{
+    font-family: 'Times New Roman', Times, serif;
+ }
+ .ads .iconparent{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 3vh;
     /* justify-content: space-evenly; */
-    /* column-gap: 2vh; */
  }

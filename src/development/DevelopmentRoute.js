@@ -5,18 +5,7 @@ import "./Webdevelop.css"
 
 import "./Development.css"
 const DevelopmentRoute= ()=>{
-    // const [web,setWeb] = useState([])
- 
-    // useEffect(()=>{
-     
-    //       axios.get('http://localhost:4005/udemy/getdatafromstore')
-    //           .then((res)=>{setWeb(res.data);
-    //             console.log(res.data)    
-    //         })
-    //           .catch((err)=>console.log(err))
-        
-    //     },
-    // [])
+
     
         return(
        <> 

@@ -489,74 +489,74 @@ const WebDevelop = ()=>{
                 
             </div>
             {/* Ratings and coloumn wise cards */}
-
-            <div className="webcardcontainer_parent">
-                <div className="wedinnerCover">
-                    <div className="webcardcontainer">
-                        <div className="rating_div_coloumn">
-                            <span className="textrating">&nbsp;&nbsp;Ratings
-                                <sapn className="upangleicon">
-                                <i class="fa-solid fa-angle-up"></i>
-                                </sapn>
+        
+        <div className="webcardcontainer_parent">
+            <div className="webcardcontainer">
+                <div className="rating_div_coloumn">
+                    <span className="textrating">&nbsp;&nbsp;Ratings
+                        <sapn className="upangleicon">
+                        <i class="fa-solid fa-angle-up"></i>
+                        </sapn>
+                    </span>
+                    <div className="rating_div_row_parent">
+                        <div className="rating_div_row">
+                            <span>
+                            <i class="fa-regular fa-circle"></i>
+                            </span>  
+                            <span className="star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
                             </span>
-                            <div className="rating_div_row_parent">
-                                <div className="rating_div_row">
-                                    <span>
-                                    <i class="fa-regular fa-circle"></i>
-                                    </span>  
-                                    <span className="star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    </span>
-                                    <span><b> 4.5 & up </b> (4,042)</span>
-                                </div>
-                                <div className="rating_div_row">
-                                    <span>
-                                    <i class="fa-regular fa-circle"></i>
-                                    </span>  
-                                    <span className="star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    </span>
-                                    <span><b>4.5 & up </b>  (4,042)</span>
-                                </div>
-                                <div className="rating_div_row">
-                                    <span>
-                                    <i class="fa-regular fa-circle"></i>
-                                    </span>  
-                                    <span className="star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    </span>
-                                    <span> <b> 4.5 & up</b> (4,042)</span>
-                                </div>
-                                <div className="rating_div_row">
-                                    <span>
-                                    <i class="fa-regular fa-circle"></i>
-                                    </span>  
-                                    <span className="star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    </span>
-                                    <span><b> 4.5 & up</b> (4,042)</span>
-                                </div>
-                            </div>
-                        
+                            <span><b> 4.5 & up </b> (4,042)</span>
                         </div>
-                    {/* coloumnwise card */}
-                        <div className="webcardparent">
+                        <div className="rating_div_row">
+                            <span>
+                            <i class="fa-regular fa-circle"></i>
+                            </span>  
+                            <span className="star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            </span>
+                            <span><b>4.5 & up </b>  (4,042)</span>
+                        </div>
+                        <div className="rating_div_row">
+                            <span>
+                            <i class="fa-regular fa-circle"></i>
+                            </span>  
+                            <span className="star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            </span>
+                            <span> <b> 4.5 & up</b> (4,042)</span>
+                        </div>
+                        <div className="rating_div_row">
+                            <span>
+                            <i class="fa-regular fa-circle"></i>
+                            </span>  
+                            <span className="star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            </span>
+                            <span><b> 4.5 & up</b> (4,042)</span>
+                        </div>
+                    </div>
+                
+                </div>
+                {/* coloumnwise card */}
+               <div>
+               <div className="webcardparent">
                         {web.filter((item)=>(item.id>33) && (item.id<37)).map((item,index)=>{
                             return(
                                 <>
@@ -564,14 +564,16 @@ const WebDevelop = ()=>{
                                             <div className="webimg">
                                                 <img src={item.img} alt="not found"/>
                                             </div>
+                                           
                                             <div className="webcarddetail">
                                                 <div className="row1">
                                                     <span>{item.heading}</span>
-                                                    <span>{item.price}</span>
+                                                    <span><i class="fa-solid fa-indian-rupee-sign"></i>{item.price}</span>
                                                 </div>
                                                 <div>{item.name}</div>
-                                                <div className=""> 
-                                                    <span className=""><b>{item.rating}  </b>
+                                                <div className="row_rating"> 
+                                                    <span className="ratingtext">{item.rating}</span>
+                                                    <span className="rating">
                                                     <i class="fa-solid fa-star"></i>
                                                     <i class="fa-solid fa-star"></i>
                                                     <i class="fa-solid fa-star"></i>
@@ -580,40 +582,136 @@ const WebDevelop = ()=>{
                                                     </span>
                                                     <span>({item.viewer}) </span>
                                                 </div>
-                                                <div>{item.total_hrs} total hours . {item.previous_price} . All Levels</div>
-                                                <div>Best seller</div>
+                                                <div className="totalhrs">{item.total_hrs} total hours . {item.previous_price} . All Levels</div>
+                                                <div className="bestseller">Best seller</div>
+
                                             </div>
                                     
                                         {/* CARD ON HOVER */}
-                                            {/* <div className="webcardhover">
+                                           <div className="webcardhover">
                                                 <div className="wedcardhoverdetail">
-                                                    <h1>{item.para}</h1>
+                                                    
+                                                    <h5>{item.para}</h5>
                                                     <div className="webpoints">
                                                         <p><i class="fa-solid fa-check"></i></p>
                                                         <p className="keypoint">{item.key_1}</p>
                                                     </div>
                                                     <div className="webpoints">
                                                         <p><i class="fa-solid fa-check"></i></p>
-                                                        <p>{item.key_1}</p>
+                                                        <p className="keypoint">{item.key_1}</p>
                                                     </div>
                                                     <div className="webpoints">
                                                         <p><i class="fa-solid fa-check"></i></p>
-                                                        <p>{item.key_1}</p>
+                                                        <p className="keypoint">{item.key_1}</p>
                                                     </div>
+
+                                                    <div className="webhoveraddtocart">
+                                                    <button className="webaddtocartbutton">
+                                                        Add to cart
+                                                    </button>
+                                                    <div className="webwishlist">
+                                                        <i class="fa-regular fa-heart"></i>
+                                                    </div>
+                                                    
+                                                </div> 
                                                 </div>
-                                            </div> */}
+                                            </div> 
                                         </div>    
                                 </>
                             )
                         })}
+
+
+                        <div className="ads">
+                            <div className="row1">
+                                <h2>Top companies trust Udemy</h2>
+                                <div>Get your team access to Udemy's top 25,000+ courses</div>
+                            </div>
+                            <div className="iconparent">
+                                <img src="https://s.udemycdn.com/partner-logos/v4/nasdaq-dark.svg" alt="not found"/>
+                                <img src="https://s.udemycdn.com/partner-logos/v4/volkswagen-dark.svg" alt="not found"/>
+                                <img src="https://s.udemycdn.com/partner-logos/v4/box-dark.svg" alt="not found"/>
+                                <img src="https://s.udemycdn.com/partner-logos/v4/netapp-dark.svg" alt="not found"/>
+                                <img src="https://s.udemycdn.com/partner-logos/v4/eventbrite-dark.svg" alt="not found"/>
+                            </div>
+    
                         </div>
-                    </div>
+
                 </div>
 
-            </div>
+                <div className="webcardlast">
+                        {web.filter((item)=>(item.id>37) && (item.id<43)).map((item,index)=>{
+                            return(
+                                <>
+                                        <div className="webcard_row">
+                                            <div className="webimg">
+                                                <img src={item.img} alt="not found"/>
+                                            </div>
+                                           
+                                            <div className="webcarddetail">
+                                                <div className="row1">
+                                                    <span>{item.heading}</span>
+                                                    <span><i class="fa-solid fa-indian-rupee-sign"></i>{item.price}</span>
+                                                </div>
+                                                <div>{item.name}</div>
+                                                <div className="row_rating"> 
+                                                    <span className="ratingtext">{item.rating}</span>
+                                                    <span className="rating">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                                    <i class="fa-regular fa-star"></i>
+                                                    </span>
+                                                    <span>({item.viewer}) </span>
+                                                </div>
+                                                <div className="totalhrs">{item.total_hrs} total hours . {item.previous_price} . All Levels</div>
+                                                <div className="bestseller">Best seller</div>
 
+                                            </div>
+                                    
+                                        {/* CARD ON HOVER */}
+                                           <div className="webcardhover">
+                                                <div className="wedcardhoverdetail">
+                                                    
+                                                    <h5>{item.para}</h5>
+                                                    <div className="webpoints">
+                                                        <p><i class="fa-solid fa-check"></i></p>
+                                                        <p className="keypoint">{item.key_1}</p>
+                                                    </div>
+                                                    <div className="webpoints">
+                                                        <p><i class="fa-solid fa-check"></i></p>
+                                                        <p className="keypoint">{item.key_1}</p>
+                                                    </div>
+                                                    <div className="webpoints">
+                                                        <p><i class="fa-solid fa-check"></i></p>
+                                                        <p className="keypoint">{item.key_1}</p>
+                                                    </div>
+
+                                                    <div className="webhoveraddtocart">
+                                                    <button className="webaddtocartbutton">
+                                                        Add to cart
+                                                    </button>
+                                                    <div className="webwishlist">
+                                                        <i class="fa-regular fa-heart"></i>
+                                                    </div>
+                                                    
+                                                </div> 
+                                                </div>
+                                            </div> 
+                                        </div>    
+                                </>
+                            )
+                        })}
+                </div>
+               </div>
+
+
+            </div>
+        </div>
 
        </>
     )
 }
-export default WebDevelop
+export default WebDevelop  
+              
