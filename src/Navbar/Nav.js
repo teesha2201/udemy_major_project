@@ -6,6 +6,8 @@ import Login from "../Login_signUp/Login";
 import WebDevelop from "../development/WebDevelop";
 import DevelopmentRoute from "../development/DevelopmentRoute";
 import Development from "../development/Development";
+import DataScience from "../development/DataScience";
+import MobileDevelopment from "../development/MobileDevelopment"
 const  Nav=()=> { 
 
   return (
@@ -36,7 +38,7 @@ const  Nav=()=> {
                       <ul className="development_subroute">
                         <div className="under_div">
                           <li className="web_development_container">
-                           <NavLink to="/develop/webdevelopment" className="nav"> Web Development</NavLink>
+                           <NavLink to="/develop/webdevelopment" className="nav">Web Development</NavLink>
                             <div className="web_development_cover">
                               <ul className="web_development_subroutes">
                                 <span>
@@ -50,7 +52,7 @@ const  Nav=()=> {
                             </div>
                           </li>
                           <li className="data_science_container">
-                          <NavLink to="/develop/datascience" >Data Science</NavLink>
+                          <NavLink to="/develop/datascience" className="nav">Data Science</NavLink>
                             <div className="data_science_cover">
                               <ul className="data_science_subroutes">
                                 <span>
@@ -64,7 +66,7 @@ const  Nav=()=> {
                             </div>
                           </li>
                           <li className="mobile_development_container">
-                            Mobile Development
+                          <NavLink to="/develop/mobiledevelopment" className="nav">Mobile Development</NavLink> 
                             <div className="mobile_development_cover">
                               <ul className="mobile_development_subroutes">
                                 <span>
@@ -1150,7 +1152,8 @@ const  Nav=()=> {
           <Route path="/developroute" element={<DevelopmentRoute/>}/>
           <Route path="/development" element={<Development/>}/>
           <Route path="/develop/webdevelopment" element={<WebDevelop/>}/>
-
+          <Route path="/develop/datascience" element={<DataScience/>}/>
+          <Route path="/develop/mobiledevelopment" element={<MobileDevelopment/>}/>
         </Routes> 
        
       
