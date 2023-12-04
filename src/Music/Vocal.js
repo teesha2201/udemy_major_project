@@ -23,7 +23,7 @@ const Vocal = ()=>{
           
             <div className="web_parent">
                 <div className="web_div">
-                    <h1 className="web_headingfirst">Yoga Courses</h1>
+                    <h1 className="web_headingfirst">Vocal Courses</h1>
                     <h3>Courses to get you started</h3>
                     <div className="web_mostpopular">
                         <span className="mostpopular">Most popular</span>
@@ -34,7 +34,7 @@ const Vocal = ()=>{
                 <div className="web_cardrow1">
                                     <div className="web_cardParent1">
                                         
-                                        {music.filter((item,index)=>(item.id===453)).map((item,index)=>{
+                                        {music.filter((item,index)=>(item.id===489)).map((item,index)=>{
                                         return(
                                             <div key={index} className="web_cardContainer2">
                                             
@@ -115,7 +115,7 @@ const Vocal = ()=>{
                                     </div> 
                                     <div className="web_cardParent1">
                                         
-                                        {music.filter((item,index)=>(item.id===458)).map((item,index)=>{
+                                        {music.filter((item,index)=>(item.id===484)).map((item,index)=>{
                                         return(
                                             <div key={index} className="web_cardContainer2">
                                             
@@ -196,7 +196,7 @@ const Vocal = ()=>{
                                     </div> 
                                     <div className="web_cardParent1">
                                         
-                                        {music.filter((item,index)=>(item.id===456)).map((item,index)=>{
+                                        {music.filter((item,index)=>(item.id===490)).map((item,index)=>{
                                         return(
                                             <div key={index} className="web_cardContainer2">
                                             
@@ -277,7 +277,7 @@ const Vocal = ()=>{
                                     </div> 
                                     <div className="web_cardParent1">
                                         
-                                        {music.filter((item,index)=>(item.id===459)).map((item,index)=>{
+                                        {music.filter((item,index)=>(item.id===503)).map((item,index)=>{
                                         return(
                                             <div key={index} className="web_cardContainer2">
                                             
@@ -560,7 +560,7 @@ const Vocal = ()=>{
                 {/* coloumnwise card */}
                <div>
                <div className="webcardparent">
-                        {music.filter((item)=>(item.id>456) && (item.id<460)).map((item,index)=>{
+                        {music.filter((item)=>(item.id>499) && (item.id<503)).map((item,index)=>{
                             return(
                                 <>
                                         <div className="webcard_row">
@@ -643,7 +643,7 @@ const Vocal = ()=>{
                 </div>
 
                 <div className="webcardlast">
-                        {music.filter((item)=>(item.id>461) && (item.id<467)).map((item,index)=>{
+                        {music.filter((item)=>(item.id>497) && (item.id<503)).map((item,index)=>{
                             return(
                                 <>
                                         <div className="webcard_row">

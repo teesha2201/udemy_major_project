@@ -23,7 +23,7 @@ const MusicTech = ()=>{
           
             <div className="web_parent">
                 <div className="web_div">
-                    <h1 className="web_headingfirst">Yoga Courses</h1>
+                    <h1 className="web_headingfirst">Music Techniques Courses</h1>
                     <h3>Courses to get you started</h3>
                     <div className="web_mostpopular">
                         <span className="mostpopular">Most popular</span>
