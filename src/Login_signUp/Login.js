@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import "./Login.css"
 
 
 function Login() {
@@ -45,14 +46,41 @@ function Login() {
 
   return (
     <div className="loginParent">
-      
+      <div className="logininner">
+      <h3>Log in to your Udemy account</h3>
       <form className="loginForm" onSubmit={handleSubmit}>
-       <br/>
-      <h1 className="heading"> WelCome to LogIn Page</h1>
+       
       <br/>
-      <br/>
+        <input className="text"
+        type="email"
+        name="email"
+        id="useremail"
+        onChange={handleChange}
+        value={data.email}
+        placeholder='Continue with google'/>
+      <br />
+      <br />
+      <input className="text"
+        type="email"
+        name="email"
+        id="useremail"
+        onChange={handleChange}
+        value={data.email}
+        placeholder='Continue with Facebook'/>
+      <br />
+      <br />
+      <input className="text"
+        type="email"
+        name="email"
+        id="useremail"
+        onChange={handleChange}
+        value={data.email}
+        placeholder='Continue with Apple'/>
+      <br />
+      <br />
+        
         <label htmlFor="useremail">
-          Email:
+       
         </label>
         <input className="text"
           type="email"
@@ -60,11 +88,11 @@ function Login() {
           id="useremail"
           onChange={handleChange}
           value={data.email}
-          placeholder='enter your name'/>
+          placeholder='Email'/>
         <br />
         <br />
         <label  htmlFor="password">
-          Password:
+        
         </label>
         <input
           className="text1"
@@ -74,21 +102,29 @@ function Login() {
           id="password"
           onChange={handleChange}
           value={data.password}
-          placeholder='create your password'
+          placeholder=' Password'
         />
         <br />
         <br />
         <button className="Submitbutton" type="submit">
-          Submit
+          Login
         </button>
         <br/>
-        <div className="or">OR</div>
+        <div className="or">OR <span className="forget">Forget Password</span></div>
         <br/>
-          <NavLink to="/register" className="nextpage">
-            If not Register then please click on this signUp Link
-          </NavLink>
+        <hr/>
+        <div>
+        Don't have an account?<NavLink to="/register" className="nextpage"> Signup </NavLink>
+        <span className="nextpage">Log in with your organization</span>
+        </div>
+          
+        <div>
+
+        </div>
+        
         <br/>
       </form>
+      </div>
      
     </div>
   );

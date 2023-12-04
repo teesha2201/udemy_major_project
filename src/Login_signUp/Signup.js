@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-
+import './Signup.css'
 
 function Signup() {
 
@@ -106,37 +106,44 @@ function Signup() {
   return (
     <>
       <div className="registerParent">
-      <form className="registerForm" onSubmit={handleSubmit}>
+        <div className="registerinner">
+        <form className="registerForm" onSubmit={handleSubmit}>
         <br/>
-        <h1 className="heading">WelCome to Register Page</h1>
+        <h3 className="heading">Sign up and start learning</h3>
         <br/>
-        <label id="name" htmlFor="name"> Name:</label>
-        <input type="text"  name="name"  id="name"  onChange={handleChange}  value={data.name} required/>
+        <label id="name" htmlFor="name"> </label>
+        <input type="text"  name="name"  id="name" className="text2" onChange={handleChange}  value={data.name} placeholder="Full Name" required/>
         <br />
         <br />
-        <label id="email" htmlFor="email">Email:</label>
-        <input type="email" name="email" id="email" onChange={handleChange} value={data.email} required/>
+        <label id="email" htmlFor="email"></label>
+        <input type="email" name="email" id="email"   className="text2" onChange={handleChange} value={data.email}   placeholder="Email" required/>
         <br />
         <br />
-        <label id="password" htmlFor="Password">Set Password:</label>
-        <input type="password" maxLength="8" name="password" id="Password" onChange={handleChange} value={data.password} required/>
+        <label id="password" htmlFor="Password"></label>
+        <input type="password" maxLength="8" name="password" id="Password"  className="text2" onChange={handleChange} value={data.password}   placeholder="Password"required/>
         <br />
         <br />
-        <label id="phoneNo" htmlFor="phoneNo"> Phone.No:</label>
+        {/* <label id="phoneNo" htmlFor="phoneNo"> Phone.No:</label>
         <input type="number" max="10" name="phoneNo" id="phoneNo" onChange={handleChange} value={data.phoneNo} required/>
         <br />
-        <br />
+        <br /> */}
         <button className="Submitbutton" onClick={handleSubmit}>
           submit
         </button>
         <br/>
-        <div className="or">If Already have an Account </div>
         <br/>
-        <Link to="/login" className="nextpage">
+        
+        <hr/>
+        <br/>
+        <br/>
+        <div className="or">Already have an account? <Link to="/login" className="nextpage">
           Go To Login Page
         </Link>
+        </div>
+        
         <br/>
         </form>
+        </div>
       </div>
       
     </>

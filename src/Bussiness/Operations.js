@@ -1,14 +1,15 @@
 import React,{useState,useEffect} from "react";
 import axios from "axios";
-import "./Webdevelop.css"
-import DevelopmentRoute from "./DevelopmentRoute";
-const DataScience  = ()=>{
-    const [web,setWeb] = useState([])
+import "../development/Webdevelop.css"
+import BussinessRoute from "./BussinessRoute";
+
+const  Operations = ()=>{
+    const [bussiness,setBussiness] = useState([])
  
     useEffect(()=>{
      
           axios.get('http://localhost:4005/udemy/getdatafromstore')
-              .then((res)=>{setWeb(res.data);
+              .then((res)=>{setBussiness(res.data);
                 console.log(res.data)    
             })
               .catch((err)=>console.log(err))
@@ -17,11 +18,11 @@ const DataScience  = ()=>{
     
     return(
        <>   
-           < DevelopmentRoute />
+           < BussinessRoute />
            
             <div className="web_parent">
                 <div className="web_div">
-                    <h1 className="web_headingfirst">Data Science Courses</h1>
+                    <h1 className="web_headingfirst">Operations Courses</h1>
                     <h3>Courses to get you started</h3>
                     <div className="web_mostpopular">
                         <span className="mostpopular">Most popular</span>
@@ -32,7 +33,7 @@ const DataScience  = ()=>{
                 <div className="web_cardrow1">
                                     <div className="web_cardParent1">
                                         
-                                        {web.filter((item,index)=>(item.id===53)).map((item,index)=>{
+                                        {bussiness.filter((item,index)=>(item.id===126)).map((item,index)=>{
                                         return(
                                             <div key={index} className="web_cardContainer2">
                                             
@@ -113,7 +114,7 @@ const DataScience  = ()=>{
                                     </div> 
                                     <div className="web_cardParent1">
                                         
-                                        {web.filter((item,index)=>(item.id===54)).map((item,index)=>{
+                                        {bussiness.filter((item,index)=>(item.id===127)).map((item,index)=>{
                                         return(
                                             <div key={index} className="web_cardContainer2">
                                             
@@ -194,7 +195,7 @@ const DataScience  = ()=>{
                                     </div> 
                                     <div className="web_cardParent1">
                                         
-                                        {web.filter((item,index)=>(item.id===55)).map((item,index)=>{
+                                        {bussiness.filter((item,index)=>(item.id===128)).map((item,index)=>{
                                         return(
                                             <div key={index} className="web_cardContainer2">
                                             
@@ -275,7 +276,7 @@ const DataScience  = ()=>{
                                     </div> 
                                     <div className="web_cardParent1">
                                         
-                                        {web.filter((item,index)=>(item.id===56)).map((item,index)=>{
+                                        {bussiness.filter((item,index)=>(item.id===129)).map((item,index)=>{
                                         return(
                                             <div key={index} className="web_cardContainer2">
                                             
@@ -558,7 +559,7 @@ const DataScience  = ()=>{
                 {/* coloumnwise card */}
                <div>
                <div className="webcardparent">
-                        {web.filter((item)=>(item.id>55) && (item.id<59)).map((item,index)=>{
+                        {bussiness.filter((item)=>(item.id>129) && (item.id<133)).map((item,index)=>{
                             return(
                                 <>
                                         <div className="webcard_row">
@@ -641,7 +642,7 @@ const DataScience  = ()=>{
                 </div>
 
                 <div className="webcardlast">
-                        {web.filter((item)=>(item.id>59) && (item.id<65)).map((item,index)=>{
+                        {bussiness.filter((item)=>(item.id>132) && (item.id<138)).map((item,index)=>{
                             return(
                                 <>
                                         <div className="webcard_row">
@@ -714,5 +715,5 @@ const DataScience  = ()=>{
        </>
     )
 }
-export default DataScience 
+export default Operations
               

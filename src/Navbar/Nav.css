@@ -13,11 +13,11 @@
   align-items: center;
   width:10%;
   height: 100%;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 .udemyLogo {
     width: 60%;
-    border: 2px solid black;
+    /* border: 2px solid black; */
   }
   .tooltip {
     position: relative;
@@ -26,7 +26,7 @@
   .tooltiptext {
     position: absolute;
     background-color:white;
-    color: black;
+    /* color: black; */
     width:18vw;
     height: 18vh;
     text-align: center;
@@ -603,7 +603,7 @@
   }
   
   .Nav_Container {
-    border: 2px solid black;
+    border: 2px solid lightgray;
     position: relative;
     height: 10vh;
     display: flex;
@@ -616,7 +616,7 @@
     /* top:1.6vh; */
     text-align: center;
     width: 10%;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     height: 100%;
   }
   .categories_div {
@@ -627,12 +627,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     /* width: 100%; */
     text-align: center;
     height: 100%;
   }
-
+  .loginbtn , .signupbtn{
+    width:5vw;
+    height:6vh;
+  }
+  .signupbtn{
+    background-color: black;
+    color:white;
+  }
   /* .navbarParent {
     list-style: none;
   } */
@@ -643,7 +650,7 @@
     left: 0%;
     line-height: 5vh;
     min-height: 50%;
- 
+    /* border: 2px solid red; */
   }
   .categories_list {
     list-style: none;
@@ -668,24 +675,26 @@
     cursor: pointer;
   }
   .under_div {
-    border: 1px solid gray;
+    border: 1px solid lightgray;
     position: absolute;
-    left: -13%;
+    left: -12%;
     text-align: left;
-    height: 65vh;
-    top: -1%;
+    height: 55vh;
+    top: 0%;
     background-color:white;
+    width:15vw;
   }
   
   .development_subroute {
-    border: 2px solid black;
+    /* border: 2px solid rgb(106, 61, 61); */
     position: absolute;
     left: 13vw;
-    width: 12vw;
+    width: 15vw;
     top: 0vh;
-    height: 60.6vh;
+    height: 54.6vh;
     display: none;
     list-style: none;
+    text-align: center;
   }
   
   .developement {
@@ -849,6 +858,7 @@
   
   .web_development_container:hover .web_development_subroutes {
     display: block;
+    
   }
   
   .data_science_container:hover .data_science_subroutes {
@@ -910,7 +920,7 @@
     line-height: 5vh;
     background-color: white;
     width: 15vw;
-    height: 65vh;
+    height: 55vh;
   }
   .business:hover .business_subroute {
     display: block;
@@ -1004,9 +1014,9 @@
     position: relative;
     left: -15%;
     line-height: 5vh;
-    width: 18vw;
+    width: 15vw;
     top: -2.6vh;
-    height: 65vh;
+    height: 55vh;
     background-color: white;
   }
   .subroute_It {
@@ -1045,7 +1055,7 @@
     background-color: white;
     line-height: 5vh;
     width: 15vw;
-    height: 65vh;
+    height: 55vh;
     top: -0.1vh;
   }
   
@@ -1059,19 +1069,8 @@
     list-style: none;
     /* border: 1px solid black; */
   }
-  .Office_Productivity:hover .subroute_Office {
-    display: block;
-  }
-  .Office_under_div {
-    border: 1px solid gray;
-    position: relative;
-    left: 2%;
-    background-color: white;
-    line-height: 5vh;
-    width: 15vw;
-    height: 65vh;
-    top: -0.1vh;
-  }
+ 
+
   .Microsoft_container:hover .Microsoft_subroute {
     display: block;
   }
@@ -1099,20 +1098,7 @@
     list-style: none;
     /* border: 1px solid black; */
   }
-  .Personal_under_div {
-    border: 1px solid gray;
-    position: relative;
-    left: 2%;
-    background-color: white;
-    line-height: 5vh;
-    width: 15vw;
-    height: 65vh;
-    top: -0.1vh;
-  }
-  .Personal_Development:hover .subroute_Personal {
-    display: block;
-  }
-  
+
   .Relationship_container:hover .Relationship_subroute {
     display: block;
   }
@@ -1147,7 +1133,7 @@
     background-color: white;
     line-height: 5vh;
     width: 15vw;
-    height: 65vh;
+    height: 55vh;
     top: -0.1vh;
   }
   .Design:hover .subroute_Design {
@@ -1190,8 +1176,8 @@
     left: 2%;
     background-color: white;
     line-height: 5vh;
-    height: 65vh;
-  
+    height: 55vh;
+    width:15vw;
     top: -0.1vh;
   }
   
@@ -1266,7 +1252,7 @@
     background-color:white;
     line-height: 5vh;
     width: 15vw;
-    height: 65vh;
+    height: 55vh;
     top: -0.1vh;
   }
   
@@ -1297,7 +1283,7 @@
     background-color: white;
     line-height: 5vh;
     width: 15vw;
-    height: 65vh;
+    height: 55vh;
     top: -0.1vh;
   }
   .music:hover .subroute_music {
@@ -1340,7 +1326,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width:10%;
+    width:20%;
     list-style-type: none;
 }
 

@@ -1,9 +1,7 @@
 import {  NavLink} from "react-router-dom";
 import React from "react";
-// import axios from "axios";
+import "./Development.css";
 
-
-import "./Development.css"
 const DevelopmentRoute= ()=>{
 
     
@@ -15,17 +13,21 @@ const DevelopmentRoute= ()=>{
                     Development
                     </NavLink> <i class="fa-solid fa-chevron-right"></i></span>
                 <span>
-                    <NavLink to="/develop/webdevelopment" className="nav">web Development</NavLink>
+                    <NavLink to="/develop/webdevelopment" className="nav">web Design</NavLink>
                     </span>
+                    <span>Game Design</span>
+                
+                <span>
+                {/* Mobile Development */}
+                    <NavLink to="/develop/mobiledevelopment" className="nav">3D & Animation</NavLink> 
+                </span>
+                <span>
+                    Fashion Design
+                </span>
                 <span>
                     <NavLink to="/develop/datascience" className="nav">Data Science</NavLink>
                 </span>
                 
-                <span>
-                    <NavLink to="/develop/mobiledevelopment" className="nav">Mobile Development</NavLink> 
-                </span>
-                <span>Programming Languages</span>
-                <span>Game Development</span>
                
             </div>
     
