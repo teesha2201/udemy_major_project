@@ -3,7 +3,7 @@ import axios from "axios";
 import "../development/Webdevelop.css"
 import FinanceRoute from "./FinanceRoute";
 
-const Finance_Acc= ()=>{
+const FinanceAcc= ()=>{
     const [finance,setFinance] = useState([])
  
     useEffect(()=>{
@@ -715,5 +715,5 @@ const Finance_Acc= ()=>{
        </>
     )
 }
-export default Finance_Acc 
+export default FinanceAcc 
               

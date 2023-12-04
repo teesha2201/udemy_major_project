@@ -3,7 +3,7 @@ import axios from "axios";
 import "../development/Webdevelop.css"
 import BussinessRoute from "./BussinessRoute";
 
-const  Human_Resources = ()=>{
+const  HumanResources = ()=>{
     const [bussiness,setBussiness] = useState([])
  
     useEffect(()=>{
@@ -715,5 +715,5 @@ const  Human_Resources = ()=>{
        </>
     )
 }
-export default Human_Resources
+export default HumanResources
               

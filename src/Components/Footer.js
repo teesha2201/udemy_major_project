@@ -14,19 +14,19 @@ const Footer = () =>{
                     </div>
                     <div className="row1_right">
                         <span>
-                            <img src="https://s.udemycdn.com/partner-logos/v4/nasdaq-light.svg"/>
+                            <img src="https://s.udemycdn.com/partner-logos/v4/nasdaq-light.svg" alt="not found"/>
                         </span>
                         <span>
-                            <img src="https://s.udemycdn.com/partner-logos/v4/volkswagen-light.svg"/>
+                            <img src="https://s.udemycdn.com/partner-logos/v4/volkswagen-light.svg" alt="not found"/>
                         </span>
                         <span>
-                            <img src="https://s.udemycdn.com/partner-logos/v4/box-light.svg"/>
+                            <img src="https://s.udemycdn.com/partner-logos/v4/box-light.svg" alt="not found"/>
                         </span>
                         <span>
-                            <img src="https://s.udemycdn.com/partner-logos/v4/netapp-light.svg"/>
+                            <img src="https://s.udemycdn.com/partner-logos/v4/netapp-light.svg" alt="not found"/>
                         </span>
                         <span>
-                            <img src="https://s.udemycdn.com/partner-logos/v4/eventbrite-light.svg"/>
+                            <img src="https://s.udemycdn.com/partner-logos/v4/eventbrite-light.svg" alt="not found"/>
                         </span>
                     </div>
                 </div>
