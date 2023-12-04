@@ -66,7 +66,7 @@ const Footer = () =>{
                 </div>
                 <div className="row3">
                     <div className="row3_left">
-                        <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg" className="logo"/>
+                        <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg" className="logo" alt="not found"/>
                     </div>
                         
                     
