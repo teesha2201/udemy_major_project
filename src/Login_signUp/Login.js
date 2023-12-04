@@ -51,33 +51,7 @@ function Login() {
       <form className="loginForm" onSubmit={handleSubmit}>
        
       <br/>
-        <input className="text"
-        type="email"
-        name="email"
-        id="useremail"
-        onChange={handleChange}
-        value={data.email}
-        placeholder='Continue with google'/>
-      <br />
-      <br />
-      <input className="text"
-        type="email"
-        name="email"
-        id="useremail"
-        onChange={handleChange}
-        value={data.email}
-        placeholder='Continue with Facebook'/>
-      <br />
-      <br />
-      <input className="text"
-        type="email"
-        name="email"
-        id="useremail"
-        onChange={handleChange}
-        value={data.email}
-        placeholder='Continue with Apple'/>
-      <br />
-      <br />
+   
         
         <label htmlFor="useremail">
        
@@ -110,11 +84,11 @@ function Login() {
           Login
         </button>
         <br/>
-        <div className="or">OR <span className="forget">Forget Password</span></div>
+        <div className="or">OR</div>
         <br/>
         <hr/>
         <div>
-        Don't have an account?<NavLink to="/register" className="nextpage"> Signup </NavLink>
+            Don't have an account?<NavLink to="/register" className="nextpage"> Signup </NavLink>
         <span className="nextpage">Log in with your organization</span>
         </div>
           
