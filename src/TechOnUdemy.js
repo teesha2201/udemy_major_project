@@ -9,7 +9,7 @@ const TechOnUdemy = ()=>{
                     
                     <div className="teachright">
                         <div className="imgonediv">
-                            <img src="https://s.udemycdn.com/teaching/billboard-desktop-v4.jpg" className="elementimg"/>
+                            <img src="https://s.udemycdn.com/teaching/billboard-desktop-v4.jpg" className="elementimg" alt="not found"/>
                         </div>
                         
                         <div className="teachleft">
