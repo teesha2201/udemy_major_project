@@ -562,6 +562,8 @@ const  Nav=()=> {
           <Route path="/teaching/math" element={<Math/>}/>
           <Route path="/teaching/science" element={<Science/>}/>
           <Route path="/teaching/teachertraining" element={<TeacherTraining/>}/>
+
+          <Route path="/teachonudemy" element={<Teachonudemy/>}/>
           
 
         </Routes> 

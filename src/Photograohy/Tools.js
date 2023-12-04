@@ -9,7 +9,7 @@ const  PhotographyTools = ()=>{
  
     useEffect(()=>{
      
-          axios.get('http://localhost:4005/udemy/getdatafromstore')
+          axios.get('https://udemy-backend-server.onrender.com/udemy/getdatafromstore')
               .then((res)=>{setLife(res.data);
                 console.log(res.data)    
             })

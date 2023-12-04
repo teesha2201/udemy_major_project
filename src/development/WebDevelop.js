@@ -7,7 +7,7 @@ const WebDevelop = ()=>{
  
     useEffect(()=>{
      
-          axios.get('http://localhost:4005/udemy/getdatafromstore')
+          axios.get('https://udemy-backend-server.onrender.com/udemy/getdatafromstore')
               .then((res)=>{setWeb(res.data);
                 console.log(res.data)    
             })

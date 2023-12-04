@@ -8,7 +8,7 @@ const  Design = ()=>{
  
     useEffect(()=>{
      
-          axios.get('http://localhost:4005/udemy/getdatafromstore')
+          axios.get('https://udemy-backend-server.onrender.com/udemy/getdatafromstore')
               .then((res)=>{setDesign(res.data);
                 console.log(res.data)    
             })
