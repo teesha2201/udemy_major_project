@@ -3,6 +3,8 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import './Signup.css'
 
+// const token = localStorage.getItem("token");
+
 function Signup() {
 
   const navi = useNavigate();
@@ -23,40 +25,40 @@ function Signup() {
   
     e.preventDefault();
     console.log(data);
-    // if(data.name.length===0 ){
+    if(data.name.length===0 ){
       
-    //   alert("Name field must have max 24 characters long");
-    //   navi('/register')
-    //   }
-    //   else if( data.email.length<=0 || data.email.length>30){
-    //     alert("email field must have min 12 and max 30 characters long");
-    //     navi('/register');
+      alert("Name field must have max 24 characters long");
+      navi('/register')
+      }
+      else if( data.email.length<=0 || data.email.length>30){
+        alert("email field must have min 12 and max 30 characters long");
+        navi('/register');
 
-    //     if(data.password.length<=0 || data.password.length>12){
-    //       alert("password field must have min 6 and max 12 characters long");
-    //       navi('/register')
+        if(data.password.length<=0 || data.password.length>12){
+          alert("password field must have min 6 and max 12 characters long");
+          navi('/register')
 
 
-    //     }
-    //   }
-    // else if(data.email.length===0 || data.email.length>30){
-    //   alert("Name field must have max 24 characters long");
-    //   navi('/register')
+        }
+      }
+    else if(data.email.length===0 || data.email.length>30){
+      alert("Name field must have max 24 characters long");
+      navi('/register')
 
-    //   if(data.password.length<=0 || data.password.length>12){
-    //     alert("password field must have min 6 and max 12 characters long");
-    //     navi('/register')
+      if(data.password.length<=0 || data.password.length>12){
+        alert("password field must have min 6 and max 12 characters long");
+        navi('/register')
 
       
 
-    //   }
-    // }
-    // else if(data.password.length<=0 || data.password.length>12){
-    //   alert("password field must have min 6 and max 12 characters long");
-    //   navi('/register')
+      }
+    }
+    else if(data.password.length<=0 || data.password.length>12){
+      alert("password field must have min 6 and max 12 characters long");
+      navi('/register')
        
      
-    // }
+    }
    
    
     await axios
