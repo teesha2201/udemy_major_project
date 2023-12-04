@@ -91,11 +91,11 @@ function Login() {
           placeholder='Email'/>
         <br />
         <br />
-        <label  htmlFor="password">
+        <label  htmlFor="password" >
         
         </label>
         <input
-          className="text1"
+          className="text"
           type="password"
           maxLength="8"
           name="password"
