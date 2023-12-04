@@ -488,11 +488,11 @@ const  Nav=()=> {
           <Route path="/bussiness/management" element={<Management/>}/>
           <Route path="/bussiness/bussiness_strategy" element={<BussinessStrategy/>}/>
           <Route path="/bussiness/operation" element={<Operations/>}/>
-          <Route path="/bussiness/human_resources"  element={<Human_Resources/>} />
+          <Route path="/bussiness/human_resources"  element={<HumanResources/>} />
         
           
           <Route path="/financeroute" element={<FinanceRoute/>}/>
-          <Route path="/finance&accounting" element={<Finance_Acc/>}/>
+          <Route path="/finance&accounting" element={<FinanceAcc/>}/>
           <Route path="/finance&acc/accounting&bookkeeping" element={<Accountingandbook/>}/>
           <Route path="/finance&acc/compilance"  element={<Compliance/>}/>
           <Route path="/finance&acc/economic" element={<Economic/>}/>
