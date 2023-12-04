@@ -78,6 +78,7 @@ import SocialScience from "../Teaching/SocialScience";
 import Math from "../Teaching/Math";
 import Science from "../Teaching/Science";
 import TeacherTraining from "../Teaching/TeacherTraining";
+import Teachonudemy from  "../Components/TechOnUdemy";
 const  Nav=()=> { 
 
   return (

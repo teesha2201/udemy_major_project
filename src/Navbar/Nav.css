@@ -903,7 +903,7 @@
   }
   .business_subroute {
     position: absolute;
-    left: 11vw;
+    left: 15vw;
     width: 10vw;
     top: -4vh;
     height: 10vh;
@@ -1012,7 +1012,7 @@
   .finance_under_div {
     border: 1px solid gray;
     position: relative;
-    left: -15%;
+    left: -4%;
     line-height: 5vh;
     width: 15vw;
     top: -2.6vh;
