@@ -3,7 +3,7 @@ import axios from "axios";
 import "../development/Webdevelop.css"
 import BussinessRoute from "./BussinessRoute";
 
-const  Bussiness_Strategy = ()=>{
+const  BussinessStrategy = ()=>{
     const [bussiness,setBussiness] = useState([])
  
     useEffect(()=>{
@@ -715,5 +715,5 @@ const  Bussiness_Strategy = ()=>{
        </>
     )
 }
-export default Bussiness_Strategy
+export default BussinessStrategy
               

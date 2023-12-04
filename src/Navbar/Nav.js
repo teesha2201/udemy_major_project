@@ -12,7 +12,7 @@ import BussinessRoute from "../Bussiness/BussinessRoute";
 import Bussiness from "../Bussiness/Bussiness";
 import Communication from "../Bussiness/Communication";
 import Management from "../Bussiness/Management";
-import Bussiness_Strategy from "../Bussiness/BussinessStrategy";
+import BussinessStrategy from "../Bussiness/BussinessStrategy";
 import Operations from "../Bussiness/Operations";
 import Human_Resources from "../Bussiness/HumanResources";
 import FinanceRoute from "../Finance/FinanceRoute";
