@@ -10,7 +10,7 @@ function Signup() {
     name: "",
     email: "",
     password: "",
-    phoneNo: "",
+    
     });
     
   const handleChange = (e) => {
@@ -23,58 +23,44 @@ function Signup() {
   
     e.preventDefault();
     console.log(data);
-    if(data.name.length===0 ){
+    // if(data.name.length===0 ){
       
-      alert("Name field must have max 24 characters long");
-      navi('/register')
-      }
-      else if( data.email.length<=0 || data.email.length>30){
-        alert("email field must have min 12 and max 30 characters long");
-        navi('/register');
+    //   alert("Name field must have max 24 characters long");
+    //   navi('/register')
+    //   }
+    //   else if( data.email.length<=0 || data.email.length>30){
+    //     alert("email field must have min 12 and max 30 characters long");
+    //     navi('/register');
 
-        if(data.password.length<=0 || data.password.length>12){
-          alert("password field must have min 6 and max 12 characters long");
-          navi('/register')
+    //     if(data.password.length<=0 || data.password.length>12){
+    //       alert("password field must have min 6 and max 12 characters long");
+    //       navi('/register')
 
-          if(data.phoneNo.length<=0 || data.phoneNo.length>=11){
-            alert("phoneNo. must have 10characters long");
-            navi('/register')
-          }
 
-        }
-      }
-    else if(data.email.length===0 || data.email.length>30){
-      alert("Name field must have max 24 characters long");
-      navi('/register')
+    //     }
+    //   }
+    // else if(data.email.length===0 || data.email.length>30){
+    //   alert("Name field must have max 24 characters long");
+    //   navi('/register')
 
-      if(data.password.length<=0 || data.password.length>12){
-        alert("password field must have min 6 and max 12 characters long");
-        navi('/register')
+    //   if(data.password.length<=0 || data.password.length>12){
+    //     alert("password field must have min 6 and max 12 characters long");
+    //     navi('/register')
 
-        if(data.phoneNo.length<=0 || data.phoneNo.length>=11){
-          alert("phoneNo. must have 10characters long");
-          navi('/register')
-        }
+      
 
-      }
-    }
-    else if(data.password.length<=0 || data.password.length>12){
-      alert("password field must have min 6 and max 12 characters long");
-      navi('/register')
+    //   }
+    // }
+    // else if(data.password.length<=0 || data.password.length>12){
+    //   alert("password field must have min 6 and max 12 characters long");
+    //   navi('/register')
        
-      if(data.phoneNo.length<=0 || data.phoneNo.length>11){
-        alert("phoneNo. must have 10characters long");
-        navi('/register')
-      }
-
-    }
-    else if(data.phoneNo.length<=0 || data.phoneNo.length>=11){
-      alert("phoneNo. must have 10characters long");
-      navi('/register')
-    }
+     
+    // }
+   
    
     await axios
-        .post("https://udemy-backend-server.onrender.com/udemy/register", data)
+        .post("https://udemy-backend-server.onrender.com/udemy/register", data )
         .then((res) => {
           alert(res.data.msg);
           setData(res.data);
@@ -98,7 +84,7 @@ function Signup() {
       name: "",
       email: "",
       password: "",
-      phoneNo: "",
+    
     });
  
 }
@@ -109,7 +95,7 @@ function Signup() {
         <div className="registerinner">
         <form className="registerForm" onSubmit={handleSubmit}>
         <br/>
-        <h3 className="heading">Sign up and start learning</h3>
+        <h3 className="headingsignup">Sign up and start learning</h3>
         <br/>
         <label id="name" htmlFor="name"> </label>
         <input type="text"  name="name"  id="name" className="text2" onChange={handleChange}  value={data.name} placeholder="Full Name" required/>
@@ -123,11 +109,8 @@ function Signup() {
         <input type="password" maxLength="8" name="password" id="Password"  className="text2" onChange={handleChange} value={data.password}   placeholder="Password"required/>
         <br />
         <br />
-        {/* <label id="phoneNo" htmlFor="phoneNo"> Phone.No:</label>
-        <input type="number" max="10" name="phoneNo" id="phoneNo" onChange={handleChange} value={data.phoneNo} required/>
-        <br />
-        <br /> */}
-        <button className="Submitbutton" onClick={handleSubmit}>
+        
+        <button className="Submitbutton" onClick={handleSubmit} >
           submit
         </button>
         <br/>

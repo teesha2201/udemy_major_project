@@ -78,7 +78,8 @@ import SocialScience from "../Teaching/SocialScience";
 import Math from "../Teaching/Math";
 import Science from "../Teaching/Science";
 import TeacherTraining from "../Teaching/TeacherTraining";
-import Teachonudemy from  "../Components/TechOnUdemy";
+import Teachonudemy from  "../TechOnUdemy";
+import TechOnUdemy from "../TechOnUdemy";
 const  Nav=()=> { 
 
   return (
@@ -443,8 +444,8 @@ const  Nav=()=> {
             className="searchbar"
           ></input>
           <div className="tooltip">
-            <ul className="teachonudemy">
-              Teach on Udemy
+            <ul className="teachonudemy" >
+                <NavLink to="/techonudemy">Teach on Udemy</NavLink>
               <li className="tooltiptext">
                 Turn What You Know into an opportunity and reach millions
                 around the world
@@ -475,6 +476,7 @@ const  Nav=()=> {
           <Route path="/" element={<HomeContainer />}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Signup />}/>
+          <Route path="/techonudemy" element={<TechOnUdemy/>}/>
           
           <Route path="/developroute" element={<DevelopmentRoute/>}/>
           <Route path="/development" element={<Development/>}/>
