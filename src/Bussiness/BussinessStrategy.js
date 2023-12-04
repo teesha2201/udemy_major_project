@@ -19,7 +19,7 @@ const  Bussiness_Strategy = ()=>{
     return(
        <>   
            < BussinessRoute />
-           <img src=""/>
+           {/* <img src=""/> */}
             <div className="web_parent">
                 <div className="web_div">
                     <h1 className="web_headingfirst">Bussiness Strategy Courses</h1>

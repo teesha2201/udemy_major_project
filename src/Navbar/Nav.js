@@ -12,11 +12,11 @@ import BussinessRoute from "../Bussiness/BussinessRoute";
 import Bussiness from "../Bussiness/Bussiness";
 import Communication from "../Bussiness/Communication";
 import Management from "../Bussiness/Management";
-import Bussiness_Strategy from "../Bussiness/Bussiness_Strategy";
+import Bussiness_Strategy from "../Bussiness/BussinessStrategy";
 import Operations from "../Bussiness/Operations";
-import Human_Resources from "../Bussiness/Human_Resources";
+import Human_Resources from "../Bussiness/HumanResources";
 import FinanceRoute from "../Finance/FinanceRoute";
-import Finance_Acc from "../Finance/Finance_Acc";
+import Finance_Acc from "../Finance/FinanceAcc";
 import Accountingandbook from "../Finance/Accountingandbook";
 import Compliance from "../Finance/Compliance";
 import Economic from "../Finance/Economic";
@@ -486,7 +486,7 @@ const  Nav=()=> {
           <Route path="/bussiness" element={<Bussiness/>}/>
           <Route path="/bussiness/communication" element={<Communication/>}/>
           <Route path="/bussiness/management" element={<Management/>}/>
-          <Route path="/bussiness/bussiness_strategy" element={<Bussiness_Strategy/>}/>
+          <Route path="/bussiness/bussiness_strategy" element={<BussinessStrategy/>}/>
           <Route path="/bussiness/operation" element={<Operations/>}/>
           <Route path="/bussiness/human_resources"  element={<Human_Resources/>} />
         
