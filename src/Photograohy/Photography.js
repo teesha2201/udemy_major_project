@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import axios from "axios";
 import "../development/Webdevelop.css"
-
+import { NavLink } from "react-router-dom";
 import PhotographyRoute from "./PhotographyRoute";
 
 const  Photography = ()=>{
@@ -391,26 +391,13 @@ const  Photography = ()=>{
 
             <div className="tablecontainer">
                 <h1>Popular topics</h1>
-                <table>
-                   
-                    <thead>
-                        <tr>
-                            <th>Web development</th>
-                            <th>React js</th>
-                            <th>CSS</th>
-                            <th>ASP.NET Core</th>
-                            <th>Redux Framework</th>
-                        </tr>
-                        <br/>
-                        <tr>
-                            <th>JavaScript</th>
-                            <th>Angular</th>
-                            <th>Node.Js</th>
-                            <th>Typescript</th>
-                            <th>Next.js</th>
-                        </tr>
-                    </thead>
-                </table>
+                <div className="populartopics">
+                    <div><NavLink to="/photography/digitalphotography" className="nav">Digital Photography</NavLink></div>
+                    <div> <NavLink to="/photography/photo" className="nav">Photography</NavLink></div>
+                    <div><NavLink to="/photography/commericialphotography" className="nav">Commercial Photography</NavLink></div>
+                    <div><NavLink to="/photography/photographytools" className="nav">Photography Tools</NavLink></div>
+                    <div><NavLink to="/photography/videodesign" className="nav">Video Design</NavLink></div>
+                </div>
             </div>
             {/* popularInstructor */}
             <div className="popularInstructor">

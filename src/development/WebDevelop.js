@@ -388,26 +388,13 @@ const WebDevelop = ()=>{
 
             <div className="tablecontainer">
                 <h1>Popular topics</h1>
-                <table>
-                   
-                    <thead>
-                        <tr>
-                            <th>Web development</th>
-                            <th>React js</th>
-                            <th>CSS</th>
-                            <th>ASP.NET Core</th>
-                            <th>Redux Framework</th>
-                        </tr>
-                        <br/>
-                        <tr>
-                            <th>JavaScript</th>
-                            <th>Angular</th>
-                            <th>Node.Js</th>
-                            <th>Typescript</th>
-                            <th>Next.js</th>
-                        </tr>
-                    </thead>
-                </table>
+                <div className="populartopics">
+                    <div>Web Design</div>
+                    <div>Game Design</div>
+                    <div>3D & Animation</div>
+                    <div>Fashion Design</div>
+                    <div>Data Science</div>
+                </div>
             </div>
             {/* popularInstructor */}
             <div className="popularInstructor">
@@ -479,7 +466,7 @@ const WebDevelop = ()=>{
                         <i class="fa-solid fa-filter"></i> Filter
                     </button>
                     <button className="sort">
-                        sort by <i class="fa-solid fa-chevron-down"></i> <br/>MOST POPULAR 
+                        sort by <i class="fa-solid fa-chevron-down"></i> MOST POPULAR 
                     </button>
                   </div>
                   <span className="result">
@@ -567,10 +554,10 @@ const WebDevelop = ()=>{
                                            
                                             <div className="webcarddetail">
                                                 <div className="row1">
-                                                    <span>{item.heading}</span>
-                                                    <span><i class="fa-solid fa-indian-rupee-sign"></i>{item.price}</span>
+                                                    <span className="heading">{item.heading}</span>
+                                                    <span className="price"><i class="fa-solid fa-indian-rupee-sign"></i>{item.price}</span>
                                                 </div>
-                                                <div>{item.name}</div>
+                                                <div className="name">{item.name}</div>
                                                 <div className="row_rating"> 
                                                     <span className="ratingtext">{item.rating}</span>
                                                     <span className="rating">
@@ -578,7 +565,7 @@ const WebDevelop = ()=>{
                                                     <i class="fa-solid fa-star"></i>
                                                     <i class="fa-solid fa-star"></i>
                                                     <i class="fa-solid fa-star-half-stroke"></i>
-                                                    <i class="fa-regular fa-star"></i>
+                                                    {/* <i class="fa-regular fa-star"></i> */}
                                                     </span>
                                                     <span>({item.viewer}) </span>
                                                 </div>
@@ -650,8 +637,8 @@ const WebDevelop = ()=>{
                                            
                                             <div className="webcarddetail">
                                                 <div className="row1">
-                                                    <span>{item.heading}</span>
-                                                    <span><i class="fa-solid fa-indian-rupee-sign"></i>{item.price}</span>
+                                                    <span className="heading">{item.heading}</span>
+                                                    <span className="price"><i class="fa-solid fa-indian-rupee-sign"></i>{item.price}</span>
                                                 </div>
                                                 <div>{item.name}</div>
                                                 <div className="row_rating"> 

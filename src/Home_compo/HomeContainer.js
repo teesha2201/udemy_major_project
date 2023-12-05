@@ -118,325 +118,325 @@ useEffect(()=>{
                                 </div>
                             
                                 <div className="cardrow">
-                                <div className="cardParent">
-                                    {home.filter((item,index)=>(item.id===14)).map((item,index)=>{
-                                    return(
-                                        <div key={index} className="cardContainer">
-                                            <div className="singleCard">
-                                                    <div className="card">
-                                                        <img src={item.img} alt="not found"/> 
-                                                    </div>
-                                                    <div className="carddetails">
-                                                        <p className="cardheading">
-                                                            {item.heading}
-                                                        </p>
-                                                        <p className="cardname">
-                                                            {item.name}
-                                                        </p>
-                                                        <p className="cardrating">
-                                                            {item.rating}⭐⭐⭐⭐⭐
-                                                            <span className="cardviewer">
-                                                                ({item.viewer})
-                                                            </span>
-                                                        </p>
-                                                        <p className="cardprice">
-                                                            <i class="fa-solid fa-indian-rupee-sign"></i>
-                                                            {item.price} &nbsp;&nbsp; 
-                                                            <span className="cardpreviousPrice">
-                                                            
-                                                            <i class="fa-solid fa-indian-rupee-sign"></i>
-                                                            {item.previous_price}
-                                                            </span>
-                                                        </p>
-                                                    </div>
+                                    <div className="cardParent">
+                                        {home.filter((item,index)=>(item.id===14)).map((item,index)=>{
+                                        return(
+                                            <div key={index} className="cardContainer">
+                                                <div className="singleCard">
+                                                        <div className="card">
+                                                            <img src={item.img} alt="not found"/> 
+                                                        </div>
+                                                        <div className="carddetails">
+                                                            <p className="cardheading">
+                                                                {item.heading}
+                                                            </p>
+                                                            <p className="cardname">
+                                                                {item.name}
+                                                            </p>
+                                                            <p className="cardrating">
+                                                                {item.rating}⭐⭐⭐⭐⭐
+                                                                <span className="cardviewer">
+                                                                    ({item.viewer})
+                                                                </span>
+                                                            </p>
+                                                            <p className="cardprice">
+                                                                <i class="fa-solid fa-indian-rupee-sign"></i>
+                                                                {item.price} &nbsp;&nbsp; 
+                                                                <span className="cardpreviousPrice">
+                                                                
+                                                                <i class="fa-solid fa-indian-rupee-sign"></i>
+                                                                {item.previous_price}
+                                                                </span>
+                                                            </p>
+                                                        </div>
 
-                                                    <div className="cardhover cardhover1">
-                                                    <div className="heading">{item.heading}</div>
-                                                    <div className="updated">
-                                                        <span className="bestseller">BestSeller</span>
-                                                        <span className="updatedtext">updated </span>
-                                                        <span className="updatedate">{item.updated_date}</span>
-                                                    </div>
+                                                        <div className="cardhover cardhover1">
+                                                        <div className="heading">{item.heading}</div>
+                                                        <div className="updated">
+                                                            <span className="bestseller">BestSeller</span>
+                                                            <span className="updatedtext">updated </span>
+                                                            <span className="updatedate">{item.updated_date}</span>
+                                                        </div>
+                                                        
+                                                        <div className="totalhrs">
+                                                            <span>{item.total_hrs}total hours</span>
+                                                            <span> . All Levels</span>
+                                                            <span> . Subtitles</span>
+                                                        </div> 
+                                                        
+                                                        <div className="aboutparent">
+                                                            <div className="about">{item.para}</div>
+                                                        </div>
                                                     
-                                                    <div className="totalhrs">
-                                                        <span>{item.total_hrs}total hours</span>
-                                                        <span> . All Levels</span>
-                                                        <span> . Subtitles</span>
-                                                    </div> 
-                                                    
-                                                    <div className="aboutparent">
-                                                        <div className="about">{item.para}</div>
-                                                    </div>
-                                                
-                                                    <div className="points">
-                                                        <div className="pointOne">
+                                                        <div className="points">
+                                                            <div className="pointOne">
+                                                                <span><i class="fa-solid fa-check"></i></span>
+                                                                <span>   {item.key_1}</span>
+                                                            </div>
+                                                            <div className="pointtwo">
                                                             <span><i class="fa-solid fa-check"></i></span>
-                                                            <span>   {item.key_1}</span>
-                                                        </div>
-                                                        <div className="pointtwo">
-                                                        <span><i class="fa-solid fa-check"></i></span>
-                                                            <span>   {item.key_2}</span>
-                                                        </div>
-                                                        <div className="pointthree">
-                                                        <span><i class="fa-solid fa-check"></i></span>
-                                                            <span>   {item.key_3}</span>
-                                                        </div>
-                                                    </div> 
+                                                                <span>   {item.key_2}</span>
+                                                            </div>
+                                                            <div className="pointthree">
+                                                            <span><i class="fa-solid fa-check"></i></span>
+                                                                <span>   {item.key_3}</span>
+                                                            </div>
+                                                        </div> 
 
-                                                    <div className="hoveraddtocart">
-                                                        <button className="addtocartbutton">
-                                                            Add to cart
-                                                        </button>
-                                                        <div className="wishlist">
-                                                            <i class="fa-regular fa-heart"></i>
+                                                        <div className="hoveraddtocart">
+                                                            <button className="addtocartbutton">
+                                                                Add to cart
+                                                            </button>
+                                                            <div className="wishlist">
+                                                                <i class="fa-regular fa-heart"></i>
+                                                            </div>
                                                         </div>
+
                                                     </div>
-
                                                 </div>
-                                            </div>
-                                        </div>    
-                                        )
-                                    })}
-                                </div> 
-                                <div className="cardParent">
-                                    {home.filter((item,index)=>(item.id===11)).map((item,index)=>{
-                                    return(
-                                        <div key={index} className="cardContainer">
-                                            <div className="singleCard">
-                                                    <div className="card">
-                                                        <img src={item.img} alt="not found" /> 
-                                                    </div>
-                                                    <div className="carddetails">
-                                                        <p className="cardheading">
-                                                            {item.heading}
-                                                        </p>
-                                                        <p className="cardname">
-                                                            {item.name}
-                                                        </p>
-                                                        <p className="cardrating">
-                                                            {item.rating}⭐⭐⭐⭐⭐
-                                                            <span className="cardviewer">
-                                                                ({item.viewer})
-                                                            </span>
-                                                        </p>
-                                                        <p className="cardprice">
-                                                            <i class="fa-solid fa-indian-rupee-sign"></i>
-                                                            {item.price} &nbsp;&nbsp; 
-                                                            <span className="cardpreviousPrice">
-                                                            
-                                                            <i class="fa-solid fa-indian-rupee-sign"></i>
-                                                            {item.previous_price}
-                                                            </span>
-                                                        </p>
-                                                    </div>
+                                            </div>    
+                                            )
+                                        })}
+                                    </div> 
+                                    <div className="cardParent">
+                                        {home.filter((item,index)=>(item.id===11)).map((item,index)=>{
+                                        return(
+                                            <div key={index} className="cardContainer">
+                                                <div className="singleCard">
+                                                        <div className="card">
+                                                            <img src={item.img} alt="not found" /> 
+                                                        </div>
+                                                        <div className="carddetails">
+                                                            <p className="cardheading">
+                                                                {item.heading}
+                                                            </p>
+                                                            <p className="cardname">
+                                                                {item.name}
+                                                            </p>
+                                                            <p className="cardrating">
+                                                                {item.rating}⭐⭐⭐⭐⭐
+                                                                <span className="cardviewer">
+                                                                    ({item.viewer})
+                                                                </span>
+                                                            </p>
+                                                            <p className="cardprice">
+                                                                <i class="fa-solid fa-indian-rupee-sign"></i>
+                                                                {item.price} &nbsp;&nbsp; 
+                                                                <span className="cardpreviousPrice">
+                                                                
+                                                                <i class="fa-solid fa-indian-rupee-sign"></i>
+                                                                {item.previous_price}
+                                                                </span>
+                                                            </p>
+                                                        </div>
 
-                                                    <div className=" cardhover cardhover2">
-                                                    <div className="heading">{item.heading}</div>
-                                                    <div className="updated">
-                                                        <span className="bestseller">BestSeller</span>
-                                                        <span className="updatedtext">updated </span>
-                                                        <span className="updatedate">{item.updated_date}</span>
-                                                    </div>
+                                                        <div className=" cardhover cardhover2">
+                                                        <div className="heading">{item.heading}</div>
+                                                        <div className="updated">
+                                                            <span className="bestseller">BestSeller</span>
+                                                            <span className="updatedtext">updated </span>
+                                                            <span className="updatedate">{item.updated_date}</span>
+                                                        </div>
+                                                        
+                                                        <div className="totalhrs">
+                                                            <span>{item.total_hrs}total hours</span>
+                                                            <span> . All Levels</span>
+                                                            <span> . Subtitles</span>
+                                                        </div> 
+                                                        
+                                                        <div className="aboutparent">
+                                                            <div className="about">{item.para}</div>
+                                                        </div>
                                                     
-                                                    <div className="totalhrs">
-                                                        <span>{item.total_hrs}total hours</span>
-                                                        <span> . All Levels</span>
-                                                        <span> . Subtitles</span>
-                                                    </div> 
+                                                        <div className="points">
+                                                            <div className="pointOne">
+                                                                <span><i class="fa-solid fa-check"></i></span>
+                                                                <span>   {item.key_1}</span>
+                                                            </div>
+                                                            <div className="pointtwo">
+                                                                <span><i class="fa-solid fa-check"></i></span>
+                                                                <span>   {item.key_2}</span>
+                                                            </div>
+                                                            <div className="pointthree">
+                                                                <span><i class="fa-solid fa-check"></i></span>
+                                                                <span>   {item.key_3}</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="hoveraddtocart">
+                                                            <button className="addtocartbutton">
+                                                                Add to cart
+                                                            </button>
+                                                            <div className="wishlist">
+                                                                <i class="fa-regular fa-heart"></i>
+                                                            </div>
+                                                        </div>
+    
+                                                        </div>
+                                                </div>
+                                            </div>    
+                                            )
+                                        })}
+                                    </div> 
+                                    <div className="cardParent">
+                                        {home.filter((item,index)=>(item.id===12)).map((item,index)=>{
+                                        return(
+                                            <div key={index} className="cardContainer">
+                                                <div className="singleCard">
+                                                        <div className="card">
+                                                            <img src={item.img} alt="not found"/> 
+                                                        </div>
+                                                        <div className="carddetails">
+                                                            <p className="cardheading">
+                                                                {item.heading}
+                                                            </p>
+                                                            <p className="cardname">
+                                                                {item.name}
+                                                            </p>
+                                                            <p className="cardrating">
+                                                                {item.rating}⭐⭐⭐⭐⭐
+                                                                <span className="cardviewer">
+                                                                    ({item.viewer})
+                                                                </span>
+                                                            </p>
+                                                            <p className="cardprice">
+                                                                <i class="fa-solid fa-indian-rupee-sign"></i>
+                                                                {item.price} &nbsp;&nbsp; 
+                                                                <span className="cardpreviousPrice">
+                                                                
+                                                                <i class="fa-solid fa-indian-rupee-sign"></i>
+                                                                {item.previous_price}
+                                                                </span>
+                                                            </p>
+                                                        </div>
+
+                                                        <div className="cardhover cardhover3">
+                                                        <div className="heading">{item.heading}</div>
+                                                        <div className="updated">
+                                                            <span className="bestseller">BestSeller</span>
+                                                            <span className="updatedtext">updated </span>
+                                                            <span className="updatedate">{item.updated_date}</span>
+                                                        </div>
+                                                        
+                                                        <div className="totalhrs">
+                                                            <span>{item.total_hrs}total hours</span>
+                                                            <span> . All Levels</span>
+                                                            <span> . Subtitles</span>
+                                                        </div> 
+                                                        
+                                                        <div className="aboutparent">
+                                                            <div className="about">{item.para}</div>
+                                                        </div>
                                                     
-                                                    <div className="aboutparent">
-                                                        <div className="about">{item.para}</div>
-                                                    </div>
-                                                
-                                                    <div className="points">
-                                                        <div className="pointOne">
+                                                        <div className="points">
+                                                            <div className="pointOne">
+                                                                <span><i class="fa-solid fa-check"></i></span>
+                                                                <span>   {item.key_1}</span>
+                                                            </div>
+                                                            <div className="pointtwo">
+                                                                <span><i class="fa-solid fa-check"></i></span>
+                                                                <span>   {item.key_2}</span>
+                                                            </div>
+                                                            <div className="pointthree">
                                                             <span><i class="fa-solid fa-check"></i></span>
-                                                            <span>   {item.key_1}</span>
-                                                        </div>
-                                                        <div className="pointtwo">
-                                                            <span><i class="fa-solid fa-check"></i></span>
-                                                            <span>   {item.key_2}</span>
-                                                        </div>
-                                                        <div className="pointthree">
-                                                            <span><i class="fa-solid fa-check"></i></span>
-                                                            <span>   {item.key_3}</span>
-                                                        </div>
-                                                    </div>
+                                                                <span>   {item.key_3}</span>
+                                                            </div>
+                                                        </div> 
 
-                                                    <div className="hoveraddtocart">
-                                                        <button className="addtocartbutton">
-                                                            Add to cart
-                                                        </button>
-                                                        <div className="wishlist">
-                                                            <i class="fa-regular fa-heart"></i>
+                                                        <div className="hoveraddtocart">
+                                                            <button className="addtocartbutton">
+                                                                Add to cart
+                                                            </button>
+                                                            <div className="wishlist">
+                                                                <i class="fa-regular fa-heart"></i>
+                                                            </div>
                                                         </div>
-                                                    </div>
- 
-                                                    </div>
-                                            </div>
-                                        </div>    
-                                        )
-                                    })}
-                                </div> 
-                                <div className="cardParent">
-                                    {home.filter((item,index)=>(item.id===12)).map((item,index)=>{
-                                    return(
-                                        <div key={index} className="cardContainer">
-                                            <div className="singleCard">
-                                                    <div className="card">
-                                                        <img src={item.img} alt="not found"/> 
-                                                    </div>
-                                                    <div className="carddetails">
-                                                        <p className="cardheading">
-                                                            {item.heading}
-                                                        </p>
-                                                        <p className="cardname">
-                                                            {item.name}
-                                                        </p>
-                                                        <p className="cardrating">
-                                                            {item.rating}⭐⭐⭐⭐⭐
-                                                            <span className="cardviewer">
-                                                                ({item.viewer})
-                                                            </span>
-                                                        </p>
-                                                        <p className="cardprice">
-                                                            <i class="fa-solid fa-indian-rupee-sign"></i>
-                                                            {item.price} &nbsp;&nbsp; 
-                                                            <span className="cardpreviousPrice">
-                                                            
-                                                            <i class="fa-solid fa-indian-rupee-sign"></i>
-                                                            {item.previous_price}
-                                                            </span>
-                                                        </p>
-                                                    </div>
+                                                        </div>
+                                                </div>
+                                            </div>    
+                                            )
+                                        })}
+                                    </div> 
+                                    <div className="cardParent">
+                                        {home.filter((item,index)=>(item.id===13)).map((item,index)=>{
+                                        return(
+                                            <div key={index} className="cardContainer">
+                                                <div className="singleCard">
+                                                        <div className="card">
+                                                            <img src={item.img} alt="not found"/> 
+                                                        </div>
+                                                        <div className="carddetails">
+                                                            <p className="cardheading">
+                                                                {item.heading}
+                                                            </p>
+                                                            <p className="cardname">
+                                                                {item.name}
+                                                            </p>
+                                                            <p className="cardrating">
+                                                                {item.rating}⭐⭐⭐⭐⭐
+                                                                <span className="cardviewer">
+                                                                    ({item.viewer})
+                                                                </span>
+                                                            </p>
+                                                            <p className="cardprice">
+                                                                <i class="fa-solid fa-indian-rupee-sign"></i>
+                                                                {item.price} &nbsp;&nbsp; 
+                                                                <span className="cardpreviousPrice">
+                                                                
+                                                                <i class="fa-solid fa-indian-rupee-sign"></i>
+                                                                {item.previous_price}
+                                                                </span>
+                                                            </p>
+                                                        </div>
 
-                                                    <div className="cardhover cardhover3">
-                                                    <div className="heading">{item.heading}</div>
-                                                    <div className="updated">
-                                                        <span className="bestseller">BestSeller</span>
-                                                        <span className="updatedtext">updated </span>
-                                                        <span className="updatedate">{item.updated_date}</span>
-                                                    </div>
+                                                        <div className=" cardhover cardhover4">
+                                                        <div className="heading">{item.heading}</div>
+                                                        <div className="updated">
+                                                            <span className="bestseller">BestSeller</span>
+                                                            <span className="updatedtext">updated </span>
+                                                            <span className="updatedate">{item.updated_date}</span>
+                                                        </div>
+                                                        
+                                                        <div className="totalhrs">
+                                                            <span>{item.total_hrs}total hours</span>
+                                                            <span> . All Levels</span>
+                                                            <span> . Subtitles</span>
+                                                        </div> 
+                                                        
+                                                        <div className="aboutparent">
+                                                            <div className="about">{item.para}</div>
+                                                        </div>
                                                     
-                                                    <div className="totalhrs">
-                                                        <span>{item.total_hrs}total hours</span>
-                                                        <span> . All Levels</span>
-                                                        <span> . Subtitles</span>
-                                                    </div> 
-                                                    
-                                                    <div className="aboutparent">
-                                                        <div className="about">{item.para}</div>
-                                                    </div>
-                                                
-                                                    <div className="points">
-                                                        <div className="pointOne">
-                                                            <span><i class="fa-solid fa-check"></i></span>
-                                                            <span>   {item.key_1}</span>
-                                                        </div>
-                                                        <div className="pointtwo">
-                                                            <span><i class="fa-solid fa-check"></i></span>
-                                                            <span>   {item.key_2}</span>
-                                                        </div>
-                                                        <div className="pointthree">
-                                                        <span><i class="fa-solid fa-check"></i></span>
-                                                            <span>   {item.key_3}</span>
-                                                        </div>
-                                                    </div> 
+                                                        <div className="points">
+                                                            <div className="pointOne">
+                                                                <span><i class="fa-solid fa-check"></i></span>
+                                                                <span>   {item.key_1}</span>
+                                                            </div>
+                                                            <div className="pointtwo">
+                                                                <span><i class="fa-solid fa-check"></i></span>
+                                                                <span>   {item.key_2}</span>
+                                                            </div>
+                                                            <div className="pointthree">
+                                                                <span><i class="fa-solid fa-check"></i></span>
+                                                                <span>   {item.key_3}</span>
+                                                            </div>
+                                                        </div> 
 
-                                                    <div className="hoveraddtocart">
-                                                        <button className="addtocartbutton">
-                                                            Add to cart
-                                                        </button>
-                                                        <div className="wishlist">
-                                                            <i class="fa-regular fa-heart"></i>
+                                                        <div className="hoveraddtocart">
+                                                            <button className="addtocartbutton">
+                                                                Add to cart
+                                                            </button>
+                                                            <div className="wishlist">
+                                                                <i class="fa-regular fa-heart"></i>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    </div>
-                                            </div>
-                                        </div>    
-                                        )
-                                    })}
-                                </div> 
-                                <div className="cardParent">
-                                    {home.filter((item,index)=>(item.id===13)).map((item,index)=>{
-                                    return(
-                                        <div key={index} className="cardContainer">
-                                            <div className="singleCard">
-                                                    <div className="card">
-                                                        <img src={item.img} alt="not found"/> 
-                                                    </div>
-                                                    <div className="carddetails">
-                                                        <p className="cardheading">
-                                                            {item.heading}
-                                                        </p>
-                                                        <p className="cardname">
-                                                            {item.name}
-                                                        </p>
-                                                        <p className="cardrating">
-                                                            {item.rating}⭐⭐⭐⭐⭐
-                                                            <span className="cardviewer">
-                                                                ({item.viewer})
-                                                            </span>
-                                                        </p>
-                                                        <p className="cardprice">
-                                                            <i class="fa-solid fa-indian-rupee-sign"></i>
-                                                            {item.price} &nbsp;&nbsp; 
-                                                            <span className="cardpreviousPrice">
-                                                            
-                                                            <i class="fa-solid fa-indian-rupee-sign"></i>
-                                                            {item.previous_price}
-                                                            </span>
-                                                        </p>
-                                                    </div>
 
-                                                    <div className=" cardhover cardhover4">
-                                                    <div className="heading">{item.heading}</div>
-                                                    <div className="updated">
-                                                        <span className="bestseller">BestSeller</span>
-                                                        <span className="updatedtext">updated </span>
-                                                        <span className="updatedate">{item.updated_date}</span>
-                                                    </div>
-                                                    
-                                                    <div className="totalhrs">
-                                                        <span>{item.total_hrs}total hours</span>
-                                                        <span> . All Levels</span>
-                                                        <span> . Subtitles</span>
-                                                    </div> 
-                                                    
-                                                    <div className="aboutparent">
-                                                        <div className="about">{item.para}</div>
-                                                    </div>
-                                                
-                                                    <div className="points">
-                                                        <div className="pointOne">
-                                                            <span><i class="fa-solid fa-check"></i></span>
-                                                            <span>   {item.key_1}</span>
                                                         </div>
-                                                        <div className="pointtwo">
-                                                            <span><i class="fa-solid fa-check"></i></span>
-                                                            <span>   {item.key_2}</span>
-                                                        </div>
-                                                        <div className="pointthree">
-                                                            <span><i class="fa-solid fa-check"></i></span>
-                                                            <span>   {item.key_3}</span>
-                                                        </div>
-                                                    </div> 
-
-                                                    <div className="hoveraddtocart">
-                                                        <button className="addtocartbutton">
-                                                            Add to cart
-                                                        </button>
-                                                        <div className="wishlist">
-                                                            <i class="fa-regular fa-heart"></i>
-                                                        </div>
-                                                    </div>
-
-                                                    </div>
-                                            </div>
-                                        </div>    
-                                        )
-                                    })}
-                                </div> 
+                                                </div>
+                                            </div>    
+                                            )
+                                        })}
+                                    </div> 
                                 </div>
                             </div>               
                         </div>
@@ -973,7 +973,7 @@ useEffect(()=>{
             </div>
 
         </div>
-
+        
         {/* Footer */}
     </>  
     )                          

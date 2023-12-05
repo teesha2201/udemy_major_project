@@ -1338,3 +1338,18 @@ a{
 a:hover{
 color:blue;
 }
+
+/************ navbar responsive ****************/
+
+
+@media screen and (min-width:300px) and (max-width: 667px) {
+.searchbar {
+  display: none;
+}
+.tooltip{
+  display: none;
+}
+.iconParent , .navbarParent , .categories_list{
+  display: none;
+}
+}

@@ -1,8 +1,8 @@
 import React,{useState,useEffect} from "react";
 import axios from "axios";
 import "../development/Webdevelop.css"
-
 import LifestyleRoute from "./LifestyleRoute";
+import { NavLink } from "react-router-dom";
 
 const  ArtCraft = ()=>{
     const [life,setLife] = useState([])
@@ -391,26 +391,13 @@ const  ArtCraft = ()=>{
 
             <div className="tablecontainer">
                 <h1>Popular topics</h1>
-                <table>
-                   
-                    <thead>
-                        <tr>
-                            <th>Web development</th>
-                            <th>React js</th>
-                            <th>CSS</th>
-                            <th>ASP.NET Core</th>
-                            <th>Redux Framework</th>
-                        </tr>
-                        <br/>
-                        <tr>
-                            <th>JavaScript</th>
-                            <th>Angular</th>
-                            <th>Node.Js</th>
-                            <th>Typescript</th>
-                            <th>Next.js</th>
-                        </tr>
-                    </thead>
-                </table>
+                <div className="populartopics">
+                    <div><NavLink to="/lifestyle/arts&crafts" className="nav">Arts & Crafts</NavLink></div>
+                    <div><NavLink to="/lifestyle/beauty&makeup" className="nav">Beauty & Makeup</NavLink></div>
+                    <div><NavLink to="/lifestyle/travel" className="nav">Travel</NavLink></div>
+                    <div><NavLink to="/lifestyle/food&beverage" className="nav"> Food & Beverage</NavLink></div>
+                    <div><NavLink to="/lifestyle/petcare&training" className="nav">Pet care & Training</NavLink></div>
+                </div>
             </div>
             {/* popularInstructor */}
             <div className="popularInstructor">

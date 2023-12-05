@@ -2,6 +2,7 @@ import React,{useState,useEffect} from "react";
 import axios from "axios";
 import "../development/Webdevelop.css"
 import FinanceRoute from "./FinanceRoute";
+import { NavLink } from "react-router-dom";
 
 const Accountingandbook = ()=>{
     const [finance,setFinance] = useState([])
@@ -390,26 +391,13 @@ const Accountingandbook = ()=>{
 
             <div className="tablecontainer">
                 <h1>Popular topics</h1>
-                <table>
-                   
-                    <thead>
-                        <tr>
-                            <th>Web development</th>
-                            <th>React js</th>
-                            <th>CSS</th>
-                            <th>ASP.NET Core</th>
-                            <th>Redux Framework</th>
-                        </tr>
-                        <br/>
-                        <tr>
-                            <th>JavaScript</th>
-                            <th>Angular</th>
-                            <th>Node.Js</th>
-                            <th>Typescript</th>
-                            <th>Next.js</th>
-                        </tr>
-                    </thead>
-                </table>
+                <div className="populartopics">
+                    <div> <NavLink to="/finance&accounting">Finance & Accounting</NavLink></div>
+                    <div><NavLink to="/finance&acc/compilance" className="nav">Compilance</NavLink> </div>
+                    <div><NavLink to="/finance&acc/economic" className="nav">Economic</NavLink></div>
+                    <div><NavLink to="/finance&acc/finance" className="nav">Finance</NavLink></div>
+                    <div><NavLink to="/finance&acc/taxes" className="nav">Taxes</NavLink></div>
+                </div>
             </div>
             {/* popularInstructor */}
             <div className="popularInstructor">

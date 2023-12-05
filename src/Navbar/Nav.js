@@ -80,7 +80,42 @@ import Science from "../Teaching/Science";
 import TeacherTraining from "../Teaching/TeacherTraining";
 import Teachonudemy from  "../TechOnUdemy";
 import TechOnUdemy from "../TechOnUdemy";
+import { useEffect ,useState} from "react";
+import { useNavigate ,Link} from "react-router-dom";
+import axios from "axios";
+import Search from '../Search/Search';
+
+
 const  Nav=()=> { 
+
+ 
+  const navi = useNavigate();
+
+
+  const [searchData,setSearchData]=useState()
+  const handleSearch= (e)=>{
+    setSearchData(e.target.value)
+
+  }
+  // console.log(searchData)
+  const [search, setSearch] = useState("");
+
+  const ourSearchShow=()=>{
+    setSearchData("")
+    
+}
+    useEffect(()=>{
+      axios.get(`https://udemy-backend-server.onrender.com/udemy/search?type=${searchData}`)
+      .then((response) =>setSearch(response.data))
+      .catch((error) => {console.error("Error fetching search results:", error);});
+    },[searchData,navi])
+
+
+    const [count, setCount] = useState(false);
+
+
+
+
 
   return (
     <>
@@ -438,11 +473,25 @@ const  Nav=()=> {
             </ul>
           </div>
          
-          <input
-            type="text"
-            placeholder="search for anything"
-            className="searchbar"
-          ></input>
+
+          {/* <div> */}
+            {/* <div className="searchIcon">
+              <Link to="/search" state={search}>
+              <span  onClick={ourSearchShow }>
+              <i class="fa-solid fa-magnifying-glass"></i>
+              </span>
+              </Link>
+              
+            </div> */}
+            <input
+              type="text"
+              placeholder="search for anything"
+              className="searchbar"
+              onChange={handleSearch}
+            ></input>
+          {/* </div> */}
+
+          
           <div className="tooltip">
             <ul className="teachonudemy" >
                 <NavLink to="/techonudemy">Teach on Udemy</NavLink>
@@ -567,11 +616,34 @@ const  Nav=()=> {
           <Route path="/teaching/teachertraining" element={<TeacherTraining/>}/>
 
           <Route path="/teachonudemy" element={<Teachonudemy/>}/>
-          
+          <Route path="/search" element={<Search/>}></Route>
 
         </Routes> 
-       
-      
+          
+
+
+          {/* hamberger: */}
+
+          {/* <div onClick={() => setCount(!count)} className="display">
+            <i className={`fa-solid ${count ? 'fa-close' : 'fa-bars'}`}></i>
+          </div>
+
+        <div className={count ? 'hambergerlinksShows' : 'hambergerlinksHide'}>
+              <ul className="navbar-listResponsive">
+                <li className='listres'>{auth ? 
+                <NavLink onClick={() => {setCount(!count) ;logout()}} to="/register" className="navlinkRes" style={({isActive})=>({color: isActive ? "aqua":"Navy"})}>
+                      Logout
+                  </NavLink>:<NavLink  onClick={() => setCount(!count)} to="/login" className="navlinkRes" style={({isActive})=>({color: isActive ? "aqua":"Navy"})}>Login</NavLink>}
+                
+                </li>
+                <li className="listres">
+                  <NavLink onClick={() => setCount(!count)} to="/" className="navlinkRes" style={({isActive})=>({color: isActive ? "aqua":"Navy"})}>
+                      Home
+                  </NavLink>
+                </li>
+                </ul>
+        </div>           
+       */}
     </>
   );
 }

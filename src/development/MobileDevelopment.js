@@ -388,26 +388,13 @@ const MobileDevelopment  = ()=>{
 
             <div className="tablecontainer">
                 <h1>Popular topics</h1>
-                <table>
-                   
-                    <thead>
-                        <tr>
-                            <th>Web development</th>
-                            <th>React js</th>
-                            <th>CSS</th>
-                            <th>ASP.NET Core</th>
-                            <th>Redux Framework</th>
-                        </tr>
-                        <br/>
-                        <tr>
-                            <th>JavaScript</th>
-                            <th>Angular</th>
-                            <th>Node.Js</th>
-                            <th>Typescript</th>
-                            <th>Next.js</th>
-                        </tr>
-                    </thead>
-                </table>
+                <div className="populartopics">
+                    <div>Web Design</div>
+                    <div>Game Design</div>
+                    <div>3D & Animation</div>
+                    <div>Fashion Design</div>
+                    <div>Data Science</div>
+                </div>
             </div>
             {/* popularInstructor */}
             <div className="popularInstructor">

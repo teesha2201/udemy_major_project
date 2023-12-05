@@ -24,6 +24,7 @@
     width:30%;
     column-gap: 2vh;
     line-height: 5vh;
+    
 
 }
 .mostpopular{
@@ -46,7 +47,7 @@
     justify-content: space-evenly;
     width: 50%;
     height: auto;
-    /* border: 2px solid blue; */
+    /* border: 2px solid lightgray; */
 
 }
 .web_cardContainer2{
@@ -158,18 +159,7 @@
     font-weight: bold;
     text-align: left;
 }
-/* .cardname{
 
-}
-.cardrating{
-
-}
-.cardprice{
-
-}
-.cardviewer{
-
-} */
 .web_cardhover .web_updated{
     display: flex;
     flex-direction: row;
@@ -292,40 +282,47 @@
 }
 /* popular topic */
 .tablecontainer {
-width:100%;
+
 /* border:2px solid gray; */
 display:flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
 row-gap: 2vw;
+margin-top: 5%;;
 
 }
-
+.populartopics{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* border:2px solid gray; */
+    flex-wrap: wrap;
+}
+.populartopics div{
+    width:14%;
+    border:2px solid lightgray;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
 .tablecontainer h1  {
     width:80%;
     text-align: left;
 
 }
-.tablecontainer table{
-    width: 80%;
-}
 
-.tablecontainer table thead th{
-    width:1%;
-    border: 2px solid gainsboro;
-    text-align: center;
-    height: 8vh;
-    text-transform: capitalize;
-    font-size: 16px;
-   
-}
 
 /* popular instructor */
 .popularInstructor  , .AllWebDevelopment {
     display: flex;
     flex-direction: column;
-    width:100%;
+    /* width:100%; */
     /* border: 2px solid black; */
     align-items: center;
     row-gap: 1vw;
@@ -454,7 +451,7 @@ row-gap: 2vw;
     /* justify-content: ; */
     align-items: center;
 
-    border:2px solid red;
+    /* border:2px solid red; */
     
 }
 .webcardcontainer{
@@ -549,7 +546,7 @@ row-gap: 2vw;
 }
 .webcarddetail .row1 span
 { 
-    
+    font-size: 18px;
     font-weight: bold;
     color:black;
 }
@@ -666,4 +663,348 @@ row-gap: 2vw;
     flex-wrap: wrap;
     column-gap: 3vh;
     /* justify-content: space-evenly; */
+ }
+
+ /* media :mobile view */
+@media screen and (min-width:300px) and (max-width:667px) {
+    .rating_div_coloumn{
+            display: none;
+    }
+    .web_headingfirst{
+        font-size: 24px;
+        text-align: center;
+        
+    }
+    .web_div h3{
+        font-size: 22px;
+        text-align: center;
+        display: none;
+    }
+    .web_mostpopular{
+        width:100%;
+        margin-top: 5%;
+        /* text-align: center; */
+        /* border:2px solid rgb(141, 45, 45); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .web_cardrow1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* border: 2px solid gray; */
+        row-gap: 5vw;
+        width:100vw;
+    }
+    .web_cardParent1{
+        width:70%;
+    }
+    .web_cardContainer2{
+        display: flex;
+       
+    }
+    .web_singleCard1{
+        /* border:2px solid rgb(141, 45, 45); */
+        width:100%;
+        row-gap: 3vw;
+    }
+    .web_card1{
+        width:100%;
+    }
+    .web_carddetails{
+        width:100%;
+    }
+    .web_cardheading , .web_cardname, .web_cardrating , .web_cardprice{
+        font-size: 14px;
+    }
+    .rowParent{
+       
+        display: none;
+    }
+    
+    .populartopics{
+        width:90%;
+    }
+    .populartopics div{
+        width:16%;
+        font-size: 12px;
+    }
+    .tablecontainer  h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   
+
+
+    .popularInstructor h1{
+        width: 100%;
+        text-align: center;
+    }
+    .card_divouterrow{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        /* border:2px solid red; */
+    }
+    .card_divrow{
+        width:80%
+    }
+    .instructor_review{
+        width:90%;
+    }
+    .AllWebDevelopment{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .AllWebDevelopment h1{
+        width:80%;
+        /* border:2px solid red; */
+        font-size: 20px;
+    }
+    .filter_parent{
+        width:100%;
+        /* border:2px solid red; */
+    }
+    .filter_row div .sort , .filter{
+        width:100%;
+        font-size: 12px;
+    }
+    .webcardcontainer{
+        /* border:2px solid rgb(109, 103, 103); */
+        width:100vw;
+        
+    }
+    .webcardparent{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        row-gap: 5vw;
+    }
+    .webcard_row{
+        flex-direction: column; 
+         display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border:2px solid rgb(109, 103, 103); */
+        width:90%;
+        row-gap: 4vw;
+    }
+    .webcarddetail{
+        /* border:2px solid rgb(198, 190, 190); */
+        width:84%;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .webcarddetail .row1{
+        /* border:2px solid rgb(109, 103, 103); */
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .webcarddetail .row1 .heading{
+        font-size: 20px;
+    }
+    .webcarddetail .row1 .price{
+        color:blue;
+    }
+    .webimg{
+       width:100%;
+       border:2px solid white;
+    }
+    .webimg img{
+        /* border: 2px solid gray; */
+        width:90%;
+    }
+   
+    .webcarddetail .row1 .heading{
+        font-size: 15px;
+        /* border:2px solid rgb(109, 103, 103); */
+    }
+    .price{
+        color:blue;
+    }
+    .webcardlast{
+        justify-content: center;
+        align-items: center;
+    }
+}
+ 
+ /* media :tab view */
+ @media screen and (min-width:668px) and (max-width:1180px) {
+    .rating_div_coloumn{
+        display: none;
+}
+.web_headingfirst{
+    font-size: 30px;
+    text-align: left;
+    
+}
+.web_div h3{
+    font-size: 24px;
+    text-align: left;
+    display: none;
+}
+.web_mostpopular{
+    width:100%;
+    margin-top: 5%;
+    /* text-align: center; */
+    /* border:2px solid rgb(141, 45, 45); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.web_cardrow1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid gray; */
+    row-gap: 5vw;
+    width:100vw;
+}
+.web_cardParent1{
+    width:100%;
+}
+.web_cardContainer2{
+    display: flex;
+   
+}
+.web_singleCard1{
+    /* border:2px solid rgb(141, 45, 45); */
+    width:100%;
+    row-gap: 3vw;
+}
+.web_card1{
+    width:100%;
+}
+.web_carddetails{
+    width:100%;
+}
+.web_cardheading , .web_cardname, .web_cardrating , .web_cardprice{
+    font-size: 20px;
+}
+.rowParent{
+   
+    display: none;
+}
+
+.populartopics{
+    width:90%;
+}
+.populartopics div{
+    width:16%;
+    font-size: 12px;
+}
+.tablecontainer  h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.popularInstructor h1{
+    width: 100%;
+    text-align: center;
+}
+.card_divouterrow{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* border:2px solid red; */
+}
+.card_divrow{
+    width:80%
+}
+.instructor_review{
+    width:90%;
+}
+.AllWebDevelopment{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.AllWebDevelopment h1{
+    width:80%;
+    /* border:2px solid red; */
+    font-size: 20px;
+}
+.filter_parent{
+    width:100%;
+    /* border:2px solid red; */
+}
+.filter_row div .sort , .filter{
+    width:100%;
+    font-size: 12px;
+}
+.webcardcontainer{
+    /* border:2px solid rgb(109, 103, 103); */
+    width:100vw;
+    
+}
+.webcardparent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5vw;
+}
+.webcard_row{
+    flex-direction: column; 
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border:2px solid rgb(109, 103, 103); */
+    width:90%;
+    row-gap: 4vw;
+}
+.webcarddetail{
+    /* border:2px solid rgb(198, 190, 190); */
+    width:84%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.webcarddetail .row1{
+    /* border:2px solid rgb(109, 103, 103); */
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.webcarddetail .row1 .heading{
+    font-size: 20px;
+}
+.webcarddetail .row1 .price{
+    color:blue;
+}
+.webimg{
+   width:100%;
+   border:2px solid white;
+}
+.webimg img{
+    /* border: 2px solid gray; */
+    width:90%;
+}
+
+.webcarddetail .row1 .heading{
+    font-size: 15px;
+    /* border:2px solid rgb(109, 103, 103); */
+}
+.price{
+    color:blue;
+}
+.webcardlast{
+    justify-content: center;
+    align-items: center;
+}
  }

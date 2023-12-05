@@ -73,7 +73,7 @@
 .home_third_div_parent{
     background-color: white;
     border-top:60px solid white ;
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,20 +184,23 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 100%;
+    /* width: 100%; */
     height: auto;
 
 }
 .cardContainer{
     display: flex;
     flex-direction: column;
+   
 }
 .singleCard{
-  
-    width:18vw;
-    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    width:90%;
+    height: 40vh;
     position:relative;
-    
+    /* border:3px solid gray; */
 }
 .card{
     width:100%;
@@ -206,7 +209,7 @@
     background-color: rgb(227, 234, 239);
 }
 .card img{
-    width:16vw;
+    width:100%;
     height: 100%;
 }
 .carddetails{
@@ -497,7 +500,7 @@
 }
 /* cardcontainer2 */
 .Learners_div{
-    width:100%;
+    /* width:100%; */
     /* border: 10px solid gray; */
     display: flex;
     min-height: 70vh;
@@ -708,7 +711,7 @@ td button{
     justify-content: center;
     align-items: center;
     min-height: 60vh;
-    width:100%;
+    /* width:100%; */
     border: 80px solid white;
 }
 .udemy_bussiness_parent .leftdiv {
@@ -878,11 +881,814 @@ text-align: left;
   {
     .home_img_first{
         border:2px solid black;
-        width:96%;
+        width:100%;
     } 
+    .home_text_msg{
+        display: none;
+    }
+    .home_second_div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .home_second_img_div{
+        /* width:100%; */
+        border:2px solid black;
+       flex-wrap: wrap;
+       height: 44vh;
+    }
+    .home_third_div_parent{
+        border:2px solid rgb(124, 71, 71);
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   
+    .home_third_div{
+        border:2px solid rgb(207, 58, 58);
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        display: none;
+    }
+    .inner_div_first{
+        border:2px solid black;
+        width:100%;
+
+    }
+    .inner_div_third{
+        border:4px gray;
+    }
+    .cardrow{
+        display:flex;
+        flex-direction: column;
+    }
+    .career_div_first{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .career_inner_div{
+        margin-top: 3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 4vw;
+    }
+    .career_inner_div h1{
+        width:80%;
+        text-align: left;
+        border:2px solid black;
+    }
+    .career_inner_div .para{
+        border:2px solid black;
+        width:80%;
+        text-align: left;
+    }
+    .explore {
+        border:2px solid black;
+        width:80%;
+        display: flex;
+        justify-content: flex-start;
+    }  
+    .explore .explore_btn{
+        border:2px solid black;
+        width:50%;
+        
+    }
+    .cardrow {
+        width: 100vw;
+        border:2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .cardParent{
+        width: 100%;
+        border:2px solid black;
+       
+    }
+    .cardContainer{
+        border:2px solid rgb(177, 76, 76);
+        width: 80%;
+    }
+    .singleCard{
+        width: 100%;
+        border:2px solid black;
+    }
+    .singleCard .card{
+        width: 100%;
+        border:2px solid black;
+    }
+    .card img{
+        width: 100%;
+    }
+    .goalsContainer{
+        border:2px solid black;
+    }
+    .goalsHeading{
+        width:80%;
+        border:2px solid black;
+        text-align: center;
+    }
+    .goalCardrow{
+        flex-direction: column;
+    }
+    .learners_card{
+        border:2px solid black;
+        width:80%;
+    }
+    .circle{
+        width:8vw;
+        height: 4vh;
+        border-radius: 50%;
+    }
+    .Learners_div{
+        border:2px solid black;
+        flex-direction: column;
+    }
+    .Learners_title{
+        width:80%;
+        font-size: 24px;
+        border:2px solid black;
+    }
+    .cardrow1{
+        border:2px solid black;
+        flex-direction: column;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+    }
+    .cardContainer2{
+        border:2px solid black;
+        width: 80vw;
+    }
+    .singleCard1{
+        flex-direction: column;
+        width: 100%;
+       
+    }
+    .card1{
+        width:100%;
+    }
+    .carddetails{
+        width: 100%;
+        border:2px solid black;
+    }
+    .top_categories{
+        border:2px solid black;
+    }
+    .top_inner_parent{
+        border:2px solid black;
+        width:80%;
+    }
+    .top_inner_div{
+        width:100%;
+    }
+    .top_inner_div img , .top_inner_div h4{
+        width: 100%;
+        
+    }
+    .Featured_top_categories {
+        width: 100vw;
+    }
+    .Featured_top_categories h2{
+        border:2px solid black;
+        width: 80%;
+        font-size: 20px;
+    }
+    .top_inner_parent table{
+        width: 90%;
+    }
+    table{
+        text-align: left;
+        width: 96%;  
+    }
+    .top_inner_parent thead tr th{
+        height: 6vh;
+        font-size: 12px;
+        width: 20%;
+        border:2px solid black;
+        text-align: left;
+    }
+    .tbody tr td{
+        font-size: 10px;
+    }
+    tbody tr:nth-child(odd) td{
+        font-size: 10px;
+    }
+    tbody tr:nth-child(even) td{
+        font-size: 10px;
+    }
+    td button{
+       font-size: 12px;
+       line-height: 2vh;
+    }
+    .udemy_bussiness_parent  {
+        border:2px solid black;
+        width: 100vw;
+        display: flex;  
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 4vw;
+
+    }
+    .udemy_bussiness_parent  .leftdiv{
+        width: 80%;
+        border:2px solid black;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .udemy_bussiness_parent  .leftdiv h1{
+        font-size: 18px;
+        width: 100%;
+    }
+    .udemy_bussiness_parent  .leftdiv ul li{
+        font-size: 16px;
+        width: 100%;
+    }
+    .udemy_bussiness_parent .rightimg {
+        width: 80%;
+        border:2px solid black;
+       
+    }
+    .udemy_bussiness_parent .rightimg img{
+      width: 100%;
+    }
+    .principal_parent{
+        border:2px solid black;
+        
+    }
+    .principal .principal_inner_div{
+        margin-top: 5%;
+        border:2px solid rgb(91, 88, 88);
+        width: 80%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 5vw;
+    }
+    .principal_left{
+        width: 80%;
+    }
+    .principal_right{
+        width: 80%;
+    }
+    .principal_right div img{
+        border:2px solid black;
+        width: 25vw;
+        height: 20vh;
+        border-radius: 50%;
+    }
+    .secondlastdiv{
+        flex-direction: column;
+        border:2px solid black;
+        /* width:100%; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .secondlastdiv .imgparent{
+        width:80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .secondlastdiv .imgparent img{
+        border:2px solid black;
+        width:100%;
+        /* display: none; */
+
+    }
+    .parent_instructor{
+        width:80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .parent_instructor .instructor {
+        width:100%;
+        border:2px solid black;
+        font-size: 28px;
+    }
+    .parent_instructor .aboutinstructor{
+        width:100%;
+        border:2px solid black;
+        font-size: 20px;
+    }
+    .teachingbutton{
+        width:100%;
+        border:2px solid black;
+    }
 }
 /* ******************************tab-view***************************** */
 @media screen and (min-width:668px) and (max-width:1180px)
 {
+      .home_img_first{
+          border:2px solid black;
+          width:100%;
+      } 
+      .home_text_msg{
+          display: none;
+      }
+      .home_second_div{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .home_second_img_div{
+          width:100%;
+          border:2px solid black;
+         flex-wrap: wrap;
+         height: 8vh;
+      }
+      .home_third_div_parent{
+          border:2px solid rgb(124, 71, 71);
+          width:100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+     
+      .home_third_div{
+          border:2px solid rgb(207, 58, 58);
+          display:flex;
+          justify-content: center;
+          align-items: center;
+          width:100%;
+          display: none;
+      }
+      .inner_div_first{
+          border:2px solid black;
+          width:100%;
+  
+      }
+      .inner_div_third{
+          border:4px gray;
+      }
+      .cardrow{
+          display:flex;
+          flex-direction: column;
+      }
+      .career_div_first{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .career_inner_div{
+          margin-top: 3%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          row-gap: 4vw;
+      }
+      .career_inner_div h1{
+          width:80%;
+          text-align: left;
+          border:2px solid black;
+          font-size: 26px;
+      }
+      .career_inner_div .para{
+          border:2px solid black;
+          width:80%;
+          text-align: left;
+          font-size: 18px;
+      }
+      .explore {
+          border:2px solid black;
+          width:80%;
+          display: flex;
+          justify-content: flex-start;
+      }  
+      .explore .explore_btn{
+          border:2px solid black;
+          width:40%;
+          font-size: 24px;
+          
+      }
+      .cardrow {
+          width: 100vw;
+          border:2px solid black;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      
+      .cardParent{
+          width: 100%;
+          border:2px solid black;
+         
+      }
+      .cardContainer{
+          border:2px solid rgb(177, 76, 76);
+          width: 80%;
+      }
+      .singleCard{
+          width: 100%;
+          border:2px solid black;
+      }
+      .singleCard .card{
+          width: 100%;
+          border:2px solid black;
+      }
+      .cardheading{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .cardname{
+        font-size: 20px;
+    }
+    .cardrating{
+        font-size: 20px;
+    }
+    .cardprice{
+        font-size: 20px;
+    }
+      .card img{
+          width: 100%;
+      }
+      .goalsContainer{
+          border:2px solid black;
+      }
+      .goalsHeading{
+          width:80%;
+          border:2px solid black;
+          display: flex;
+          justify-content:flex-start;
+          align-items: center;
+      }
+      .goalCardrow{
+          flex-direction: column;
+      }
+      .goalpara{
+        font-size: 24px;
+      }
+      .learners_card{
+          border:2px solid black;
+          width:80%;
+      }
+      .circle{
+          width:10vw;
+          height: 5vh;
+          border-radius: 50%;
+      }
+      .Learners_div{
+        margin-top: 5%;
+          border:2px solid black;
+          flex-direction: column;
+      }
+      .Learners_title{
+          width:80%;
+          font-size: 34px;
+          border:2px solid black;
+      }
+      .videoparent .videotext{
+            font-size: 24px;
+      }
+      .cardrow1{
+          border:2px solid black;
+          flex-direction: column;
+          width: 100vw;
+          justify-content: center;
+          align-items: center;
+      }
+      .cardContainer2{
+          border:2px solid black;
+          width: 100vw;
+      }
+      .singleCard1{
+          flex-direction: column;
+          width: 100%;
+         
+      }
+      .card1{
+          width:100%;
+      }
+      .carddetails{
+          width: 100%;
+          border:2px solid black;
+      }
+      .top_categories{
+          border:2px solid black;
+      }
+      .top_inner_parent{
+          border:2px solid black;
+          width:80%;
+      }
+      .top_inner_div{
+          width:100%;
+      }
+      .top_inner_div img , .top_inner_div h4{
+          width: 80%;
+          
+      }
+      .top_inner_div h4{
+        font-size: 34px;
+      }
+      .Featured_top_categories {
+          width: 100vw;
+      }
+      .Featured_top_categories h2{
+          border:2px solid black;
+          width: 80%;
+          font-size: 20px;
+      }
+      .top_inner_parent table{
+          width: 90%;
+      }
+      table{
+          text-align: left;
+          width: 96%;  
+      }
+      .top_inner_parent thead tr th{
+          height: 6vh;
+          font-size: 20px;
+          width: 20%;
+          border:2px solid black;
+          text-align: left;
+      }
+      .tbody tr td{
+          font-size: 20px;
+      }
+      tbody tr:nth-child(odd) td{
+          font-size: 20px;
+      }
+      tbody tr:nth-child(even) td{
+          font-size: 16px;
+      }
+      td button{
+         font-size: 20px;
+         line-height: 2vh;
+         width: 20vw;
+      }
+      .udemy_bussiness_parent  {
+          border:2px solid black;
+          width: 100vw;
+          display: flex;  
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          row-gap: 4vw;
+  
+      }
+      .udemy_bussiness_parent  .leftdiv{
+          width: 80%;
+          /* border:2px solid black; */
+          display: flex;
+          flex-direction: column;
+          
+      }
+      .udemy_bussiness_parent  .leftdiv h1{
+          font-size: 26px;
+          width: 100%;
+      }
+      .udemy_bussiness_parent  .leftdiv ul li{
+          font-size: 26px;
+          width: 100%;
+      }
+      .udemy_bussiness_parent .rightimg {
+          width: 80%;
+          /* border:2px solid black; */
+         
+      }
+      .udemy_bussiness_parent .rightimg img{
+        width: 100%;
+      }
+      .principal_parent{
+          border:2px solid black;
+          
+      }
+      .principal .principal_inner_div{
+          margin-top: 5%;
+          border:2px solid rgb(91, 88, 88);
+          width: 80%;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          row-gap: 5vw;
+      }
+      .principal_left{
+          width: 80%;
+          font-size: 20px;
+      }
+      .principal_right{
+          width: 80%;
+          font-size: 20px;
+      }
+      .principal_right div img{
+          border:2px solid black;
+          width: 25vw;
+          height: 20vh;
+          border-radius: 50%;
+      }
+      .secondlastdiv{
+          flex-direction: column;
+          border:2px solid black;
+          /* width:100%; */
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          
+      }
+      .secondlastdiv .imgparent{
+          width:80%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .secondlastdiv .imgparent img{
+          border:2px solid black;
+          width:100%;
+          /* display: none; */
+  
+      }
+      .parent_instructor{
+          width:80%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .parent_instructor .instructor {
+          width:100%;
+          border:2px solid black;
+          font-size: 28px;
+      }
+      .parent_instructor .aboutinstructor{
+          width:100%;
+          border:2px solid black;
+          font-size: 20px;
+      }
+      .teachingbutton{
+          width:100%;
+          border:2px solid black;
+      }
 
+      /************** hover card ****************/
+      .singleCard:hover .cardhover1  {
+
+        display: flex;
+        flex-direction: column;
+        width:50vw;
+        border:10px solid white;
+        min-height:20vh;
+        row-gap: 1vw;
+        position:absolute;
+        left:20%;
+        top:0%;
+        background-color: white;
+        box-shadow: 1px 1px 1px rgb(224, 222, 222);
+        z-index:4;
+    
+    }
+     .singleCard:hover .cardhover2 , .singleCard1:hover .caedhover2{
+        
+        display: flex;
+        flex-direction: column;
+        width:50vw;
+        border:10px solid white;
+        min-height:20vh;
+        row-gap: 1vw;
+        position:absolute;
+        left:20%;
+        top:0%;
+        background-color: white;
+        box-shadow: 1px 1px 1px rgb(224, 222, 222);
+        z-index:4;
+    
+    }
+    .singleCard:hover .cardhover3{
+        
+        display: flex;
+        flex-direction: column;
+        width:50vw;
+        border:10px solid white;
+        min-height:20vh;
+        row-gap: 1vw;
+        position:absolute;
+        right:20%;
+        top:0%;
+        background-color: white;
+        box-shadow: 1px 1px 1px rgb(224, 222, 222);
+        z-index:4;
+    
+    }
+    .singleCard:hover .cardhover4{
+        
+        display: flex;
+        flex-direction: column;
+        width:50vw;
+        border:10px solid white;
+        min-height:20vh;
+        row-gap: 1vw;
+        position:absolute;
+        right:20%;
+        top:0%;
+        background-color: white;
+        box-shadow: 1px 1px 1px rgb(224, 222, 222);
+        z-index:4;
+    
+    }
+    .cardhover .heading{
+        font-size: 20px;
+        font-weight: bold;
+        text-align: left;
+    }
+    .cardhover .updated{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 1vh;
+        width:70%;
+    
+        line-height: 4vh;
+    }
+    .cardhover .bestseller{
+        color: black;
+        background-color: rgb(212, 212, 51);
+    
+        width:8vw;
+        height: 5vh;
+    }
+    .cardhover .updatedtext{
+        font-size: 14px;
+        color:green;
+        
+    }
+     .updatedate{
+        font-size: 13px;
+        color:darkgreen;
+        font-weight: bold;
+        width:40%;
+       
+    }
+    .totalhrs{
+        width:100%;
+        text-align: left;
+        /* border:2px solid black; */
+    
+    }
+    .aboutparent{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+     
+    }
+    .about{
+        text-align: left;
+        width: 100%;
+     
+    }
+    .points{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        width:90%;
+        row-gap: 1vw;
+    }
+    .pointOne , .pointtwo , .pointthree{
+        display: flex;
+        flex-direction: row; 
+    }
+    .hoveraddtocart{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .addtocartbutton{
+        color:white;
+        font-size: 16px;
+        width:70%;
+        height: 6vh;
+        background-color: rgb(147, 45, 202);
+    }
+    .wishlist{
+        width:3vw;
+        height: 6vh;
+        border-radius: 50%;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        color:black ;
+       
+    }
+    .fa-regular fa-heart{
+       font-size: larger;
+    }
 }

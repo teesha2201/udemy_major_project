@@ -2,7 +2,7 @@ import React,{useState,useEffect} from "react";
 import axios from "axios";
 import "../development/Webdevelop.css"
 import DesignRoute from "./DesignRoute";
-
+import { NavLink } from "react-router-dom";
 const  WebDesign = ()=>{
     const [design,setDesign] = useState([])
  
@@ -390,26 +390,13 @@ const  WebDesign = ()=>{
 
             <div className="tablecontainer">
                 <h1>Popular topics</h1>
-                <table>
-                   
-                    <thead>
-                        <tr>
-                            <th>Web development</th>
-                            <th>React js</th>
-                            <th>CSS</th>
-                            <th>ASP.NET Core</th>
-                            <th>Redux Framework</th>
-                        </tr>
-                        <br/>
-                        <tr>
-                            <th>JavaScript</th>
-                            <th>Angular</th>
-                            <th>Node.Js</th>
-                            <th>Typescript</th>
-                            <th>Next.js</th>
-                        </tr>
-                    </thead>
-                </table>
+                <div className="populartopics">
+                    <div> <NavLink to="/design/webdesign" className="nav">Web Design</NavLink></div>
+                    <div><NavLink to="/design/3d&animation" className="nav">3D & Animation</NavLink></div>
+                    <div><NavLink to="/design/fashiondesign" className="nav">Fashion Design</NavLink></div>
+                    <div><NavLink to="/design/gamedesign" className="nav">Game Design</NavLink></div>
+                    <div><NavLink to="/design/otherdesign" className="nav">Other Design</NavLink></div>
+                </div>
             </div>
             {/* popularInstructor */}
             <div className="popularInstructor">
