@@ -1,13 +1,13 @@
 import React, { useState,useEffect } from "react";
 import "./AddtoCart.css"
-
+import { useNavigate } from "react-router-dom";
 import {loadStripe} from '@stripe/stripe-js';
 import axios from "axios";
 
 const AddtoCart = () => {
 
  const [cart ,setCart] = useState([]);
- 
+ const navigate = useNavigate();
  console.log(cart);
   const [total,setTotal] = useState();
 
@@ -22,7 +22,14 @@ const AddtoCart = () => {
     cart.map((item)=>amount+=item.price)
     setTotal(amount);
   },[cart])
+   const handleRemove = async()=>{
+    await axios.delete("https://udemy-backend-server.onrender.com/udemy/cartdelete");
+    alert("cart has been removed successfully");
+    navigate(-1);
 
+   }
+   
+ 
   //payment integration
   const makePayment = async ()=>{
     const stripe = await loadStripe("pk_test_51OFcxhSJ9imTpFOMrr7cLjkKItk8MT04D4U3l2L9diYzzh7XSJ4IGUgyk7EA1JjKzVm1gm51ePzgHGkXk3zaTweX00CcmdCw7g");
@@ -79,7 +86,7 @@ const AddtoCart = () => {
                       <p><b>Price: </b><i class="fa-solid fa-indian-rupee-sign"></i>{item.price}</p>
                       <p><b>Course Update: </b> {item.updated_date}</p>
                       <p><b>Course duration:</b> {item.total_hrs}</p>
-                      <button className="removebtn">Remove Item</button>
+                      <button className="removebtn" onClick={handleRemove}>Remove Item</button>
                    </div>
                    {/* remove button */}
                 </div>

@@ -66,17 +66,13 @@ function Signup() {
         .then((res) => {
           alert(res.data.msg);
           setData(res.data);
-          // localStorage.setItem("token", res.data.token);
-          // console.log(res.data.token)
+       
           
           if(res.data.msg ==="user registered successfully")
             {
                 navi('/login')
             }
-          // else if(res.data.token){
-            
-            // navi("/login");
-          // }
+       
         
         })
     

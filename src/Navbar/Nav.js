@@ -128,6 +128,7 @@ const  Nav=()=> {
       navi("/search",{state:search})
     }
    
+    // const [toggle ,settoggle] = useState(false);
  
 
   return (
@@ -136,6 +137,7 @@ const  Nav=()=> {
         <div className="Nav_Container">
         <div onClick={() => setCount(!count)} className="display">
             <i className={`fa-solid ${count ? 'fa-close' : 'fa-bars'}`}></i>
+            
         </div>
 
           <div className="imgdiv">
@@ -521,12 +523,12 @@ const  Nav=()=> {
                           {/* {username.slice(0,1)} */}
                           </p>
                           <div className="emailnamediv">
-                          <p >
-                          {username} 
-                          </p>
-                          <p>
-                          {email}
-                          </p>
+                            <p >
+                            {username} 
+                            </p>
+                            <p>
+                            {email}
+                            </p>
                           
                           </div>
                          
@@ -661,8 +663,8 @@ const  Nav=()=> {
 
 
           {/* hamberger: */}
-          <div className={count ? 'hambergerlinksShows' : 'hambergerlinksHide'}>
-              <ul className="navbar-listResponsive">
+          {/* <div className={count ? 'hambergerlinksShows' : 'hambergerlinksHide'}>
+              <ul className= "navbar-listResponsive">
                 <li className='listres'>{auth ? 
                 
                 <NavLink onClick={() => {setCount(!count) ;logout()}} to="/register" className="navlinkRes" style={({isActive})=>({color: isActive ? "aqua":"Navy"})}>
@@ -671,12 +673,14 @@ const  Nav=()=> {
                 
                 </li>
                 <li className="listres" >
-                      <NavLink to="/bussiness" onClick={() => setCount(!count)} className="navlinkRes" style={({isActive})=>({color: isActive ? "aqua":"Navy"})}>
+                  
+                      <NavLink  onClick={() => {setCount(!count);settoggle(!toggle)}} className="navlinkRes" style={({isActive})=>({color: isActive ? "aqua":"Navy"})}>
                         Bussiness
                       </NavLink>
-                      <ul className="">
-                          <li className="listres">
-                            <NavLink to="" className="nav" >Communication</NavLink>
+                      {()=>settoggle(!toggle) ? 'listshow' : 'listhide'}
+                      <ul >
+                          <li className="listres" onClick={()=>navi('/bussiness/communication')}>Communication
+                         
                           </li>
                           <li className="">
                             <NavLink to="" className="nav">Management</NavLink>
@@ -721,7 +725,7 @@ const  Nav=()=> {
                 </li>
                 
               </ul>
-        </div>     
+        </div>      */}
                    
        
     </>

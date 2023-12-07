@@ -614,7 +614,7 @@ const  Certification = ()=>{
                                                     </div>
 
                                                     <div className="webhoveraddtocart">
-                                                    <button className="webaddtocartbutton">
+                                                    <button className="webaddtocartbutton" onClick={()=>handleClick(item)}>
                                                         Add to cart
                                                     </button>
                                                     <div className="webwishlist">
@@ -697,7 +697,7 @@ const  Certification = ()=>{
                                                     </div>
 
                                                     <div className="webhoveraddtocart">
-                                                    <button className="webaddtocartbutton">
+                                                    <button className="webaddtocartbutton" onClick={()=>handleClick(item)}>
                                                         Add to cart
                                                     </button>
                                                     <div className="webwishlist">

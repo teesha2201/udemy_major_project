@@ -1546,7 +1546,7 @@ border: 3px solid rgb(75, 75, 144);
   background-color: gray;
 }
 .hambergerlinksShows {
-  display: none;
+  display: block;
   cursor: pointer;
   text-align: center;
 }
@@ -1578,8 +1578,12 @@ border: 3px solid rgb(75, 75, 144);
   justify-content: space-around;
   /* align-items: center; */
 }
-
-
+.listhide{
+  display:none;
+}
+.listshow{
+  display: block;
+}
 }
 
 

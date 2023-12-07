@@ -49,6 +49,9 @@
     color:white;
     border: 5px solid rgb(75, 73, 152);
 }
+.removebtn:hover {
+    background-color: rgb(200, 144, 238);
+}
 .parent_total_buy{
 
     display: flex;
