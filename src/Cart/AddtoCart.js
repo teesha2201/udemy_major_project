@@ -1,11 +1,11 @@
 import React, { useState,useEffect } from "react";
 import "./AddtoCart.css"
-import { useNavigate } from "react-router-dom";
+
 import {loadStripe} from '@stripe/stripe-js';
 import axios from "axios";
 
 const AddtoCart = () => {
- const navigate= useNavigate()
+
  const [cart ,setCart] = useState([]);
  
  console.log(cart);

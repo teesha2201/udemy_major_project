@@ -12,7 +12,7 @@ function Login() {
     password: "",
   });
 
-  const token = localStorage.getItem("token");
+
 
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
