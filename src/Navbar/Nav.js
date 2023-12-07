@@ -510,7 +510,7 @@ const  Nav=()=> {
                   <div className="learnerparent">
                      <div className="nameiconsdiv">
                         <p onClick={()=>navi("/learnercart")}>Learning Cart</p>
-                        <p className="nameicon">{username.slice(0,1)}</p>
+                        {/* <p className="nameicon">{username.slice(0,1)}</p> */}
                      </div>
                     
                       {/* scroll down :learners cart */}
