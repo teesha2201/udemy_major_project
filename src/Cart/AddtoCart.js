@@ -12,7 +12,7 @@ const AddtoCart = () => {
   const [total,setTotal] = useState();
 
  useEffect(()=>{
-  axios.get('http://localhost:4005/udemy/getaddtocart')
+  axios.get('https://udemy-backend-server.onrender.com/udemy/getaddtocart')
   .then(res=>setCart(res.data))
   .catch((err)=>console.log(err))
 },[]) 
@@ -32,13 +32,13 @@ const AddtoCart = () => {
     const headers = {
       "Content-Type":"application/json"
     }
-    const response = await fetch("http://localhost:4005/udemy/create-checkout-session",{
+    const response = await fetch("https://udemy-backend-server.onrender.com/udemy/create-checkout-session",{
       method:"POST",
       headers:headers,
       body:JSON.stringify(body)
     })
-    await axios.post("http://localhost:4005/udemy/learnercart",cart)
-    await axios.delete("http://localhost:4005/udemy/cartdelete")
+    await axios.post("https://udemy-backend-server.onrender.com/udemy/learnercart",cart)
+    await axios.delete("https://udemy-backend-server.onrender.com/udemy/cartdelete")
     const session = await response.json();
     const result  = stripe.redirectToCheckout({
       sessionId:session.id
