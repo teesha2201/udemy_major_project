@@ -2,7 +2,7 @@ import React,{useState,useEffect} from "react";
 import axios from "axios";
 import "../development/Webdevelop.css"
 import BussinessRoute from "./BussinessRoute";
-
+import { NavLink } from "react-router-dom";
 const  Operations = ()=>{
     const [bussiness,setBussiness] = useState([])
  
@@ -390,26 +390,13 @@ const  Operations = ()=>{
 
             <div className="tablecontainer">
                 <h1>Popular topics</h1>
-                <table>
-                   
-                    <thead>
-                        <tr>
-                            <th>Web development</th>
-                            <th>React js</th>
-                            <th>CSS</th>
-                            <th>ASP.NET Core</th>
-                            <th>Redux Framework</th>
-                        </tr>
-                        <br/>
-                        <tr>
-                            <th>JavaScript</th>
-                            <th>Angular</th>
-                            <th>Node.Js</th>
-                            <th>Typescript</th>
-                            <th>Next.js</th>
-                        </tr>
-                    </thead>
-                </table>
+                <div className="populartopics">
+                    <div> <NavLink to="/bussiness/communication" className="nav">Communication</NavLink></div>
+                    <div><NavLink to="/bussiness/management" className="nav">Management</NavLink></div>
+                    <div><NavLink to="/bussiness/bussiness_strategy" className="nav">Bussiness Strategy</NavLink></div>
+                    <div><NavLink to="/bussiness/operation" className="nav">Operations</NavLink></div>
+                    <div><NavLink to="/bussiness/human_resources" className="nav">Human Resources</NavLink></div>
+                </div>
             </div>
             {/* popularInstructor */}
             <div className="popularInstructor">

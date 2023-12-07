@@ -22,17 +22,25 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("https://udemy-backend-server.onrender.com/udemy/login", data,{headers:{"authorization":`Bearer${token}`}})
+    axios.post("http://localhost:4005/udemy/login", data)
     .then((res) => {
         alert(res.data.msg);
         setData(res.data);
         localStorage.setItem("token",res.data.token);
+        localStorage.setItem("name",res.data.name);
+        localStorage.setItem("email",res.data.email);
+        console.log(res.data)
         if(res.data.msg==="email wrong"){
           alert(res.data.msg)
           navigate('/login');
         }
-        
-        navigate("/");
+        else if(res.data.msg==="password is wrong"){
+          alert(res.data.msg)
+          navigate('/login')
+        }
+        else{
+          navigate("/");
+        }
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -87,7 +95,7 @@ function Login() {
         <div className="or">OR</div>
         <br/>
         <hr/>
-        <div>
+        <div className="dont">
             Don't have an account?<NavLink to="/register" className="nextpage"> Signup </NavLink>
         <span className="nextpage">Log in with your organization</span>
         </div>

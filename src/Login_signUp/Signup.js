@@ -62,21 +62,21 @@ function Signup() {
    
    
     await axios
-        .post("https://udemy-backend-server.onrender.com/udemy/register", data )
+        .post("http://localhost:4005/udemy/register", data )
         .then((res) => {
           alert(res.data.msg);
           setData(res.data);
-          localStorage.setItem("token", res.data.token);
-          console.log(res.data.token)
+          // localStorage.setItem("token", res.data.token);
+          // console.log(res.data.token)
           
-          if(res.data.msg ==="user already registered with this email")
+          if(res.data.msg ==="user registered successfully")
             {
-                navi('/register')
+                navi('/login')
             }
-          else if(res.data.token){
+          // else if(res.data.token){
             
-            navi("/login");
-          }
+            // navi("/login");
+          // }
         
         })
     

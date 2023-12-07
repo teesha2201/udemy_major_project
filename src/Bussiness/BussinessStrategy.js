@@ -2,10 +2,10 @@ import React,{useState,useEffect} from "react";
 import axios from "axios";
 import "../development/Webdevelop.css"
 import BussinessRoute from "./BussinessRoute";
-
+import { NavLink } from "react-router-dom";
 const  BussinessStrategy = ()=>{
     const [bussiness,setBussiness] = useState([])
- 
+    const [cart,setCart] = useState()
     useEffect(()=>{
      
           axios.get('https://udemy-backend-server.onrender.com/udemy/getdatafromstore')
@@ -15,6 +15,24 @@ const  BussinessStrategy = ()=>{
               .catch((err)=>console.log(err))
         
         },[])
+        useEffect(()=>{
+            axios.get('http://localhost:4005/udemy/getaddtocart')
+            .then(res=>setCart(res.data))
+            .catch((err)=>console.log(err))
+        },[]) 
+        console.log(cart)
+        const handleClick = async(item)=>{
+            const findcart =  cart && cart.find((items)=>items.id===item.id);
+            console.log(findcart)
+            if(findcart){
+                alert('Item is already in cart')
+            }
+           else{
+            console.log(item.id)
+            await axios.post("http://localhost:4005/udemy/addtocart",item)
+           }
+    
+    }   
     
     return(
        <>   
@@ -99,7 +117,7 @@ const  BussinessStrategy = ()=>{
                                                         </div> 
 
                                                         <div className="web_hoveraddtocart">
-                                                            <button className="web_addtocartbutton">
+                                                            <button className="web_addtocartbutton" onClick={()=>handleClick(item)}>
                                                                 Add to cart
                                                             </button>
                                                             <div className="web_wishlist">
@@ -180,7 +198,7 @@ const  BussinessStrategy = ()=>{
                                                         </div> 
 
                                                         <div className="web_hoveraddtocart">
-                                                            <button className="web_addtocartbutton">
+                                                            <button className="web_addtocartbutton" onClick={()=>handleClick(item)}>
                                                                 Add to cart
                                                             </button>
                                                             <div className="web_wishlist">
@@ -261,7 +279,7 @@ const  BussinessStrategy = ()=>{
                                                         </div> 
 
                                                         <div className="web_hoveraddtocart">
-                                                            <button className="web_addtocartbutton">
+                                                            <button className="web_addtocartbutton" onClick={()=>handleClick(item)}>
                                                                 Add to cart
                                                             </button>
                                                             <div className="web_wishlist">
@@ -342,7 +360,7 @@ const  BussinessStrategy = ()=>{
                                                         </div> 
 
                                                         <div className="web_hoveraddtocart">
-                                                            <button className="web_addtocartbutton">
+                                                            <button className="web_addtocartbutton" onClick={()=>handleClick(item)}>
                                                                 Add to cart
                                                             </button>
                                                             <div className="web_wishlist">
@@ -390,26 +408,13 @@ const  BussinessStrategy = ()=>{
 
             <div className="tablecontainer">
                 <h1>Popular topics</h1>
-                <table>
-                   
-                    <thead>
-                        <tr>
-                            <th>Web development</th>
-                            <th>React js</th>
-                            <th>CSS</th>
-                            <th>ASP.NET Core</th>
-                            <th>Redux Framework</th>
-                        </tr>
-                        <br/>
-                        <tr>
-                            <th>JavaScript</th>
-                            <th>Angular</th>
-                            <th>Node.Js</th>
-                            <th>Typescript</th>
-                            <th>Next.js</th>
-                        </tr>
-                    </thead>
-                </table>
+                <div className="populartopics">
+                    <div> <NavLink to="/bussiness/communication" className="nav">Communication</NavLink></div>
+                    <div><NavLink to="/bussiness/management" className="nav">Management</NavLink></div>
+                    <div><NavLink to="/bussiness/bussiness_strategy" className="nav">Bussiness Strategy</NavLink></div>
+                    <div><NavLink to="/bussiness/operation" className="nav">Operations</NavLink></div>
+                    <div><NavLink to="/bussiness/human_resources" className="nav">Human Resources</NavLink></div>
+                </div>
             </div>
             {/* popularInstructor */}
             <div className="popularInstructor">
@@ -608,7 +613,7 @@ const  BussinessStrategy = ()=>{
                                                     </div>
 
                                                     <div className="webhoveraddtocart">
-                                                    <button className="webaddtocartbutton">
+                                                    <button className="webaddtocartbutton" onClick={()=>handleClick(item)}>
                                                         Add to cart
                                                     </button>
                                                     <div className="webwishlist">
@@ -691,7 +696,7 @@ const  BussinessStrategy = ()=>{
                                                     </div>
 
                                                     <div className="webhoveraddtocart">
-                                                    <button className="webaddtocartbutton">
+                                                    <button className="webaddtocartbutton" onClick={()=>handleClick(item)}>
                                                         Add to cart
                                                     </button>
                                                     <div className="webwishlist">

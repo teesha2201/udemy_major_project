@@ -3,6 +3,7 @@
   margin:0px;
   /* padding:0px; */
 }
+
 .Nav_Container{
   display: flex;
   flex-direction: row;
@@ -25,13 +26,13 @@
   } 
   .tooltiptext {
     position: absolute;
-    background-color:white;
+    background-color:rgb(235, 240, 241);
     /* color: black; */
     width:18vw;
     height: 18vh;
     text-align: center;
     left: 0vw;
-    top: 7vh;
+    top: 5vh;
     display: none;
     font-size: 20px;
     border: 6px solid white;
@@ -893,9 +894,22 @@
     height: 5vh;
     width: 40%;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
     text-align: center;
   }
- 
+ .searchinput{
+  height: 4vh;
+  width: 43vw;
+  border-radius: 20px;
+  text-align: center;
+  border: 0px solid white;
+ }
+ .cartcolor{
+  color:black;
+ }
   .business {
     position: relative;
     /* border: 2px solid black; */
@@ -905,7 +919,7 @@
     position: absolute;
     left: 15vw;
     width: 10vw;
-    top: -4vh;
+    top: 0vh;
     height: 10vh;
     display: none;
     list-style: none;
@@ -916,7 +930,7 @@
     border: 1px solid gray;
     position: relative;
     left: -29%;
-    top: -1vh;
+    top: 0vh;
     line-height: 5vh;
     background-color: white;
     width: 15vw;
@@ -978,7 +992,7 @@
     position: absolute;
     left: 12vw;
     width: 20vw;
-    top: -7.5vh;
+    top: -2.5vh;
     height: 10vh;
     display: none;
     list-style: none;
@@ -1328,28 +1342,247 @@
     justify-content: space-evenly;
     width:20%;
     list-style-type: none;
+    z-index: 4;
+
 }
+.learnerparent {
+  /* border:3px solid rgb(224, 68, 68); */
+  position: relative;
+  width:80%;
+  height: 9vh;
+  
+}
+
+.nameiconsdiv{
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.dropdown{
+  display: none;
+}
+
+
+.learnerparent:hover .dropdown{
+  display: block;
+  position: absolute;
+  top:8vh;
+  border:3px solid rgb(221, 212, 212);
+  background-color: aliceblue;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width:13vw;
+  height: 24vh;
+  row-gap: 1vw;
+} 
+.nameicon{
+  width:3vw;
+  height:6vh;
+  border-radius: 50%;
+  background-color: rgb(7, 7, 7);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  
+}
+
+.innerdrop{
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid rgb(249, 243, 243);
+}
+.emailnamediv{
+  display: flex;
+  flex-direction: column;
+}
+.emailnamediv p{
+  text-transform: lowercase;
+}
+
+
+
+
 
 /* Navlink css */
+.resicondiv{
+  display: none;
+}
+.responvivesearchbar{
+  display: none;
+}
+.iconsParent{
+  width:70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  list-style-type:none;
+  gap:2vw;
+  /* border: 2px solid blue; */
+}
+.login_logout{
 
-a{
-  color:black;
+display: flex;
 }
-a:hover{
-color:blue;
+li i{
+  font-size: 20px;
 }
+.loginbtn{
+  font-size: 14px;
+  color: lavender;
+  background-color: rgb(181, 205, 214);
+  border: 3px solid rgb(75, 75, 144);
+}
+.signupbtn{
+font-size: 14px;
+color: white;
+background-color: rgb(190, 160, 225);
+border: 3px solid rgb(75, 75, 144);
+}
+
+.navlinkres{
+  display:block;
+  width:100%;
+ 
+}
+.listres{
+  display:block;
+ 
+  border-bottom:4px solid lightcyan;
+  text-align: center;
+  background-color: rgb(139, 157, 163)
+}
+.listres .navlinkRes{
+  background-color: rgb(139, 157, 163);
+  color:white;
+}
+/* Style for the mobile menu icon */
+.display {
+  cursor: pointer;
+  display:none;
+  /* align-items: center; */
+
+}
+.navbar-listResponsive {
+  display: none;
+}  
+
 
 /************ navbar responsive ****************/
 
 
 @media screen and (min-width:300px) and (max-width: 667px) {
-.searchbar {
+  .imgdiv{
+    display: block;
+  }
+  .categories_parent{
+    display: none;
+  }
+  .searchbar{
+    display:block;
+  }
+  .tooltip{
+    display:none;
+  }
+  .addtoCarticon{
+    display: block;
+    background-color: aqua;
+    
+  }
+  .cartcolor{
+    color:black;
+  }
+  .udemyLogores{
+        width:12vw;
+        height: 12vh;
+  }
+  .resicondiv{
+    width: 100vw;
+    border:2px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height:10vh;
+
+
+  }
+  .learnerparent{
+  display:none; 
+  }
+
+/* Style for the mobile menu icon when active */
+.iconsParent{
+  display:flex;
+  flex-direction: row;
+  width:100%;
+ 
+  /* border: 2px solid green; */
+}
+
+.linkParent{
   display: none;
 }
-.tooltip{
+.links{
+  display:none;
+}
+.navbar-listResponsive {
+  display: block;
+  position: absolute;
+  top: 60px; /* Adjust as needed */
+  left: 0;
+  z-index: 1;
+  padding: 10px;
+  height: auto;
+  cursor:pointer;
+  display: block;
+  border: 1px solid #ccc;
+}
+.display {
+  display: block;
+  background-color: gray;
+}
+.hambergerlinksShows {
+  display: none;
+  cursor: pointer;
+  text-align: center;
+}
+.hambergerlinksHide {
   display: none;
 }
-.iconParent , .navbarParent , .categories_list{
-  display: none;
+
+
+.listres{
+  display: block;
 }
+
+.navlinkRes{
+  color:black;
+  background-color:rgb(192, 41, 41); 
+  text-decoration: none;
+  font-size: 22px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  z-index: 3;
+}
+
+
+/* menu icon */
+.display {
+  cursor: pointer;
+  height: 100%;
+  /* border:2px solid red; */
+  display: block;
+  justify-content: space-around;
+  /* align-items: center; */
+}
+
+
+}
+
+
+@media screen and (min-width:668px) and (max-width: 1180px) {
+
 }

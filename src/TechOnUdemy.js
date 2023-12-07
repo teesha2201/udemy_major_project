@@ -109,7 +109,7 @@ const TechOnUdemy = ()=>{
 
                     </div>
                     <div className="eighthdiv">
-                        <div>
+                        <div className="imgleft">
                             <img src="https://s.udemycdn.com/teaching/support-1-v3.jpg" alt="not found"/>
                         </div>
                         <div className="textdiv">
@@ -118,7 +118,7 @@ const TechOnUdemy = ()=>{
                             Our <b>Instructor Support Team</b> is here to answer your questions and review your test video, while our <b>Teaching Center</b> gives you plenty of resources to help you through the process. Plus, get the support of experienced instructors in our <b>online community</b>.
                             </div>
                         </div>
-                        <div>
+                        <div className="imgright">
                             <img src="https://s.udemycdn.com/teaching/support-2-v3.jpg" alt="not found"/>
                         </div>
                     </div>

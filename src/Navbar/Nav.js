@@ -81,15 +81,30 @@ import TeacherTraining from "../Teaching/TeacherTraining";
 import Teachonudemy from  "../TechOnUdemy";
 import TechOnUdemy from "../TechOnUdemy";
 import { useEffect ,useState} from "react";
-import { useNavigate ,Link} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Search from '../Search/Search';
+
+import PrivateComponent from "./PrivateComponent";
+import LearnerCart from "../Cart/LearnerCart";
+import AddtoCart from "../Cart/AddtoCart";
 
 
 const  Nav=()=> { 
 
- 
+  const auth = localStorage.getItem('token')
+  const username = localStorage.getItem('name')
+  const email = localStorage.getItem('email')
+  const [count, setCount] = useState(false);
+
+  // console.log(auth,username,email)
   const navi = useNavigate();
+  const logout = ()=>{
+    console.log("Logout")
+    localStorage.clear(auth);
+    
+    navi('/register');
+  }
 
 
   const [searchData,setSearchData]=useState()
@@ -100,32 +115,36 @@ const  Nav=()=> {
   // console.log(searchData)
   const [search, setSearch] = useState("");
 
-  const ourSearchShow=()=>{
-    setSearchData("")
-    
-}
+
+
     useEffect(()=>{
-      axios.get(`https://udemy-backend-server.onrender.com/udemy/search?type=${searchData}`)
+      axios.get(`http://localhost:4005/udemy/search?page=${searchData}`)
       .then((response) =>setSearch(response.data))
       .catch((error) => {console.error("Error fetching search results:", error);});
-    },[searchData,navi])
-
-
-    const [count, setCount] = useState(false);
-
-
-
-
+    },[searchData])
+    console.log(search)
+    const searchres =()=>{
+      console.log(search)
+      navi("/search",{state:search})
+    }
+   
+ 
 
   return (
     <>
+       
         <div className="Nav_Container">
+        <div onClick={() => setCount(!count)} className="display">
+            <i className={`fa-solid ${count ? 'fa-close' : 'fa-bars'}`}></i>
+        </div>
+
           <div className="imgdiv">
           <NavLink to="">
             <img
               className="udemyLogo"
               src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
-              alt="Not Found"
+              alt="Not Found" 
+
             />
           </NavLink>
           </div>
@@ -136,41 +155,7 @@ const  Nav=()=> {
                 <div className="categories_div">Categories</div>
 
                 <ul className="categories_subRoute">
-                  <div className="sub_container_two">
-                     {/* Route:Development */}
-                    <li className="developement">
-                     <NavLink to="/development">
-                            Development
-                      </NavLink>
-                      <ul className="development_subroute">
-                        <div className="under_div">
-                          <li className="web_development_container">
-                           <NavLink to="/develop/webdevelopment" className="nav">Web Development</NavLink>
-                            
-                         
-                          </li>
-                          <li className="data_science_container">
-                          <NavLink to="/develop/datascience" className="nav">Data Science</NavLink>
-
-                          </li>
-                          <li className="mobile_development_container">
-                          <NavLink to="/develop/mobiledevelopment" className="nav">Mobile Development</NavLink> 
-                            
-                          </li>
-                          <li className="programing_development_container">
-                            Programing Languages
-                          
-                          </li>
-                          <li className="game_development_container">
-                            Game Design
-                         
-                          </li>
-                          
-                        </div>
-                      </ul>
-                    </li>
-                   
-                  </div>
+                  
                     {/*Route: Bussiness */}
                   <div>
                     <li className="business">
@@ -472,29 +457,42 @@ const  Nav=()=> {
               </li>
             </ul>
           </div>
-         
-
-          {/* <div> */}
-            {/* <div className="searchIcon">
-              <Link to="/search" state={search}>
-              <span  onClick={ourSearchShow }>
-              <i class="fa-solid fa-magnifying-glass"></i>
-              </span>
-              </Link>
-              
-            </div> */}
-            <input
+          <input 
               type="text"
               placeholder="search for anything"
               className="searchbar"
               onChange={handleSearch}
-            ></input>
-          {/* </div> */}
+              
+            ></input><button onClick={searchres}><i class="fa-solid fa-magnifying-glass"></i></button>
+
+          {/* responvive navbar */}
+
+  
+
+
+
+
+      {/* *************************************************************** */}
+          {/* <div className="resicondiv">
+          <div onClick={() => setCount(!count)} className="display">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+            <img
+              className="udemyLogores"
+              src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
+              alt="Not Found" 
+
+            />
+            <i className="fa-solid fa-cart-shopping rescartcolor" onClick={()=>navi("/addtocart")}></i>
+              
+           
+          </div> */}
+            
 
           
           <div className="tooltip">
-            <ul className="teachonudemy" >
-                <NavLink to="/techonudemy">Teach on Udemy</NavLink>
+            <ul className="teachonudemy nav" >
+                <NavLink to="/techonudemy" >Teach on Udemy</NavLink>
               <li className="tooltiptext">
                 Turn What You Know into an opportunity and reach millions
                 around the world
@@ -503,22 +501,56 @@ const  Nav=()=> {
               
             </ul>
           </div>
+          <span  className="addtoCarticon" >
+              <i className="fa-solid fa-cart-shopping cartcolor" onClick={()=>navi("/addtocart")}></i>
+          </span>
+          <span className="iconParent">                       
+                {auth ?
 
-          <div className="iconParent">
-                <span>
-                <NavLink to="" className="addtoCart">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </NavLink>
-                </span>
-                <NavLink to="/login">
+                  <div className="learnerparent">
+                     <div className="nameiconsdiv">
+                        <p onClick={()=>navi("/learnercart")}>Learning Cart</p>
+                        <p className="nameicon">{username.slice(0,1)}</p>
+                     </div>
+                    
+                      {/* scroll down :learners cart */}
+                    <div className="dropdown">
+                        <div className="innerdrop">
+                          <p className="nameicon">
+                          {username.slice(0,1)}
+                          </p>
+                          <div className="emailnamediv">
+                          <p >
+                          {username} 
+                          </p>
+                          <p>
+                          {email}
+                          </p>
+                          
+                          </div>
+                         
+                        </div>
+                        <p onClick={()=>navi("/learnercart")}>My Learning Cart </p>
+                        <p onClick={()=>navi("/addtocart")}>AddtoCart</p>
+                        <p onClick={logout}>Log out</p>       
+                    </div>
+                    
+                      
+                  </div>  
+                : 
+                <>
+                  <NavLink to="/login">
                     <button className="loginbtn">Log in</button>
-                </NavLink>
-                {/* <button className="loginbtn">Log in</button> */}
-                <NavLink to="/register">
+                  </NavLink>
+          
+                  <NavLink to="/register">
                     <button className="signupbtn">Sign up</button>
-                </NavLink>
+                  </NavLink>
+                </>
+                }
+               
                 
-          </div>
+          </span>
         
         </div>
         <Routes>
@@ -527,6 +559,7 @@ const  Nav=()=> {
           <Route path="/register" element={<Signup />}/>
           <Route path="/techonudemy" element={<TechOnUdemy/>}/>
           
+          <Route element={<PrivateComponent/>}>
           <Route path="/developroute" element={<DevelopmentRoute/>}/>
           <Route path="/development" element={<Development/>}/>
           <Route path="/develop/webdevelopment" element={<WebDevelop/>}/>
@@ -614,36 +647,82 @@ const  Nav=()=> {
           <Route path="/teaching/math" element={<Math/>}/>
           <Route path="/teaching/science" element={<Science/>}/>
           <Route path="/teaching/teachertraining" element={<TeacherTraining/>}/>
+          <Route path="/learnercart" element={<LearnerCart/>}/>
+          </Route>
 
           <Route path="/teachonudemy" element={<Teachonudemy/>}/>
           <Route path="/search" element={<Search/>}></Route>
-
+          
+          
+          <Route path="/addtocart" element={<AddtoCart/>}/>
         </Routes> 
           
 
 
           {/* hamberger: */}
-
-          {/* <div onClick={() => setCount(!count)} className="display">
-            <i className={`fa-solid ${count ? 'fa-close' : 'fa-bars'}`}></i>
-          </div>
-
-        <div className={count ? 'hambergerlinksShows' : 'hambergerlinksHide'}>
+          <div className={count ? 'hambergerlinksShows' : 'hambergerlinksHide'}>
               <ul className="navbar-listResponsive">
                 <li className='listres'>{auth ? 
+                
                 <NavLink onClick={() => {setCount(!count) ;logout()}} to="/register" className="navlinkRes" style={({isActive})=>({color: isActive ? "aqua":"Navy"})}>
                       Logout
                   </NavLink>:<NavLink  onClick={() => setCount(!count)} to="/login" className="navlinkRes" style={({isActive})=>({color: isActive ? "aqua":"Navy"})}>Login</NavLink>}
                 
                 </li>
+                <li className="listres" >
+                      <NavLink to="/bussiness" onClick={() => setCount(!count)} className="navlinkRes" style={({isActive})=>({color: isActive ? "aqua":"Navy"})}>
+                        Bussiness
+                      </NavLink>
+                      <ul className="">
+                          <li className="listres">
+                            <NavLink to="" className="nav" >Communication</NavLink>
+                          </li>
+                          <li className="">
+                            <NavLink to="" className="nav">Management</NavLink>
+                          
+                          </li>
+                          
+                          <li className="">
+                            <NavLink to="" className="nav">Bussiness Strategy</NavLink>
+                         
+                          </li>
+                          <li className="">
+                          <NavLink to="" className="nav">Operations</NavLink>
+                     
+                          </li>
+                         
+                          <li className="">
+                          <NavLink to="" className="nav">Human Resources</NavLink>
+                          </li>
+
+                     
+                      </ul>
+                    </li>
                 <li className="listres">
-                  <NavLink onClick={() => setCount(!count)} to="/" className="navlinkRes" style={({isActive})=>({color: isActive ? "aqua":"Navy"})}>
-                      Home
-                  </NavLink>
+                 
+                   
+                 
                 </li>
-                </ul>
-        </div>           
-       */}
+                <li className="listres">
+            
+                   
+          
+                </li>
+                <li className="listres">
+               
+                   
+               
+                </li>
+                <li className="listres">
+                 
+                   
+                 
+                </li>
+                
+              </ul>
+        </div>     
+                   
+       
     </>
   );
 }

@@ -1,85 +1,92 @@
-
-
-
 import { useLocation } from "react-router-dom";
+import axios from "axios";
+import { useState ,useEffect } from "react";
+import "./Search.css" ;
 
 export default function Search() {
   const location= useLocation()
   const data= location.state
   console.log(data)
+  const [cart,setCart] = useState()
+  useEffect(()=>{
+    axios.get('http://localhost:4005/udemy/getaddtocart')
+    .then(res=>setCart(res.data))
+    .catch((err)=>console.log(err))
+},[]) 
+// console.log(cart)
+const handleClick = async(item)=>{
+    const findcart =  cart && cart.find((items)=>items.id===item.id);
+    console.log(findcart)
+    if(findcart){
+        alert('Item is already in cart')
+    }
+   else{
+    console.log(item.id)
+    await axios.post("http://localhost:4005/udemy/addtocart",item)
+    alert("Item has successfully added in your cart")
 
+   }
+}  
   return (
-    <div>
-               <div className="lower_Parent">
-     <div className="lower_Parent_child">
-       <div className="lower_Parent_left">
-         <div className="lower_Parent_left_Child">
-           <h2>Ratings</h2>
-           <div>
-             <input type="radio"></input>
-             <lable>⭐⭐⭐⭐⭐ 4.5 & up (8,021)</lable>
-           </div>
-           <div>
-             <input type="radio"></input>
-             <lable>⭐⭐⭐⭐⭐ 4.0 & up (10,000)</lable>
-           </div>
-           <div>
-             <input type="radio"></input>
-             <lable>⭐⭐⭐⭐⭐ 4.7 & up (10,000)</lable>
-           </div>
-           <div>
-             <input type="radio"></input>
-             <lable>⭐⭐⭐⭐⭐ 4.3 & up (9,873)</lable>
-           </div>
-           <div>
-             <input type="radio"></input>
-             <lable>⭐⭐⭐⭐⭐ 3.9 & up (8,650)</lable>
-           </div>
-         </div>
-       </div>
-        
-       <div className="lower_Parent_Right">
-         {data.map((item) => {
-             return (
-                <>
-                    <div>
-                        <img src={item.img} alt="not found"/>
-                    </div>
-                </>
-            //    <div className="lower_Middle">
-            //      <div className="lower_Middle_Img_Des">
-            //        <div className="lower_Middle_Child1">
-            //          <img
-            //            style={{ border: "1px solid gray" }}
-            //            src={item.img}
-            //            alt="Not Fond"
-            //          />
-            //        </div>
-            //        <div className="lower_Middle_Child2">
-            //          <div className="businessTitle">
-            //            {item.heading.slice(0, 45)}...
-            //          </div>
-            //          <div style={{ width: "98%" }}>
-            //            {item.key_1.slice(0, 75)}..
-            //          </div>
-            //          <div className="homeWriter">{item.name}</div>
-            //          <div className="homePrice">{item.rating}</div>
-            //        </div>
-            //      </div>
-            //      <div className="lower_Middle_Child3_Parent">
-            //        <div className="lower_Middle_Child3">
-            //          &#8377;{item.price}
-            //        </div>
-            //      </div>
-            //    </div>
-             );
-           })}
-       </div>
-     </div>
-   </div>
-   
-    </div>
+    <div className="searchContainer">
+      
+      
+        (
+          
+            <div className="search_cardrow1">
+                                    <div className="search_cardParent1">
+                                        
+                                        {data.map((item,index)=>{
+                                        return(
+                                            <div key={index} className="search_cardContainer2">
+                                            
+                                                <div className="search_singleCard1">
+                                                        <div className="search_card1">
+                                                            <img src={item.img} alt="not found"/> 
+                                                        </div>
+                                                        <div className="search_carddetails">
+                                                            <p className="search_cardheading">
+                                                                {item.heading}
+                                                            </p>
+                                                            <p className="search_cardname">
+                                                                {item.name}
+                                                            </p>
+                                                            <p className="search_cardrating">
+                                                                {item.rating}⭐⭐⭐⭐⭐
+                                                                <span className="search_cardviewer">
+                                                                    ({item.viewer})
+                                                                </span>
+                                                            </p>
+                                                            <p className="search_cardprice">
+                                                                <i class="fa-solid fa-indian-rupee-sign"></i>
+                                                                <b>{item.price}</b> &nbsp;&nbsp; 
+                                                                <span className="search_cardpreviousPrice">
+                                                                
+                                                                <i class="fa-solid fa-indian-rupee-sign"></i>
+                                                                {item.previous_price}
+                                                                </span>
+                                                            </p>
+                                                            <button className="search_addtocartbutton" onClick={()=>handleClick(item)}>
+                                                                Add to cart
+                                                            </button>
+                
+                                                        </div>
 
-  );
+                                                </div>
+                                            </div>    
+                                            )
+                                        })}
+                                    </div> 
+                                       
+                </div>
+        
+        )
+   
+
+    </div>
+    
+  )
+    
+
 }
 

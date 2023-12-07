@@ -38,3 +38,27 @@
 .headingsignup{
     font-size: 20px;
 }
+
+@media screen  and (min-width:300px) and (max-width:667px) {
+    .registerinner{
+        width:80vw;
+    }
+    .headingsignup{
+        font-size: 30px;
+    }
+}
+
+@media screen  and (min-width:668px) and (max-width:1180px) {
+    .registerinner{
+        width:80vw;
+    }
+    .text2,.text{
+        font-size: 20px;
+        color:white;
+        /* height: 6vh; */
+        border:2px solid black;
+    }
+    .or{
+        font-size: 20px;
+    }
+}

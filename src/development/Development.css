@@ -25,10 +25,14 @@
 /* media :mobile view */
 @media screen and (min-width:300px) and (max-width:667px) {
     .developmentNav{
-        box-sizing: border-box;
+        display: none;
     }
-
+    .developroute{
+        font-weight: bold;
+    }
     .fa-chevron-right{
-        font-size: 20px;
+        font-size: 50px;
+        color:lightgray;
     }
+    
 }
