@@ -7,7 +7,7 @@ const LearnerCart =()=>{
  
     useEffect(()=>{
      
-          axios.get('http://localhost:4005/udemy//learningcartget')
+          axios.get('https://udemy-backend-server.onrender.com/udemy/learningcartget')
               .then((res)=>{setCart(res.data);
                 console.log(res.data)    
             })
