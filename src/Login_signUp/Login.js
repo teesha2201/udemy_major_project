@@ -22,7 +22,7 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:4005/udemy/login", data)
+    axios.post("https://udemy-backend-server.onrender.com/udemy/login", data)
     .then((res) => {
         alert(res.data.msg);
         setData(res.data);

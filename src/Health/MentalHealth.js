@@ -5,7 +5,7 @@ import HealthRoute from "./HealthRoute";
 import { NavLink } from "react-router-dom";
 const MentalHealth = ()=>{
     const [health,setHealth] = useState([])
- 
+    const [cart,setCart] = useState()
     useEffect(()=>{
      
           axios.get('https://udemy-backend-server.onrender.com/udemy/getdatafromstore')
@@ -15,6 +15,26 @@ const MentalHealth = ()=>{
               .catch((err)=>console.log(err))
         
         },[])
+        useEffect(()=>{
+            axios.get('https://udemy-backend-server.onrender.com/udemy/getaddtocart')
+            .then(res=>setCart(res.data))
+            .catch((err)=>console.log(err))
+        },[]) 
+        // console.log(cart)
+        const handleClick = async(item)=>{
+            const findcart =  cart && cart.find((items)=>items.id===item.id);
+            console.log(findcart)
+            if(findcart){
+                alert('Item is already in cart')
+            }
+           else{
+            console.log(item.id)
+            await axios.post("https://udemy-backend-server.onrender.com/udemy/addtocart",item)
+            alert("Item has successfully added in your cart")
+
+           }
+    }  
+
     
     return(
        <>   
@@ -99,7 +119,7 @@ const MentalHealth = ()=>{
                                                         </div> 
 
                                                         <div className="web_hoveraddtocart">
-                                                            <button className="web_addtocartbutton">
+                                                            <button className="web_addtocartbutton" onClick={()=>handleClick(item)} >
                                                                 Add to cart
                                                             </button>
                                                             <div className="web_wishlist">
@@ -180,7 +200,7 @@ const MentalHealth = ()=>{
                                                         </div> 
 
                                                         <div className="web_hoveraddtocart">
-                                                            <button className="web_addtocartbutton">
+                                                            <button className="web_addtocartbutton" onClick={()=>handleClick(item)}>
                                                                 Add to cart
                                                             </button>
                                                             <div className="web_wishlist">
@@ -261,7 +281,7 @@ const MentalHealth = ()=>{
                                                         </div> 
 
                                                         <div className="web_hoveraddtocart">
-                                                            <button className="web_addtocartbutton">
+                                                            <button className="web_addtocartbutton" onClick={()=>handleClick(item)}>
                                                                 Add to cart
                                                             </button>
                                                             <div className="web_wishlist">
@@ -342,7 +362,7 @@ const MentalHealth = ()=>{
                                                         </div> 
 
                                                         <div className="web_hoveraddtocart">
-                                                            <button className="web_addtocartbutton">
+                                                            <button className="web_addtocartbutton" onClick={()=>handleClick(item)}>
                                                                 Add to cart
                                                             </button>
                                                             <div className="web_wishlist">

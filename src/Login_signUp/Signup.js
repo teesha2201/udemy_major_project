@@ -62,7 +62,7 @@ function Signup() {
    
    
     await axios
-        .post("http://localhost:4005/udemy/register", data )
+        .post("https://udemy-backend-server.onrender.com/udemy/register", data )
         .then((res) => {
           alert(res.data.msg);
           setData(res.data);
