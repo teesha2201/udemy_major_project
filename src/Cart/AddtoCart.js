@@ -22,13 +22,13 @@ const AddtoCart = () => {
     cart.map((item)=>amount+=item.price)
     setTotal(amount);
   },[cart])
-   const handleRemove = async(item_id)=>{
-    await axios.post("https://udemy-backend-server.onrender.com/udemy/deleteitem",{id:item_id});
+   const handleRemove = async(id)=>{
+    await axios.post("https://udemy-backend-server.onrender.com/udemy/deleteitem",{id:id});
     alert("cart has been removed successfully");
     // navigate(-1);
 
    }
-   
+ 
  
   //payment integration
   const makePayment = async ()=>{
