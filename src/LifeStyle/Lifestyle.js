@@ -127,7 +127,7 @@ const  Lifestyle= ()=>{
                                                         </div> 
 
                                                         <div className="web_hoveraddtocart">
-                                                            <button className="web_addtocartbutton">
+                                                            <button className="web_addtocartbutton" onClick={()=>handleClick()}>
                                                                 Add to cart
                                                             </button>
                                                             <div className="web_wishlist">
@@ -208,7 +208,7 @@ const  Lifestyle= ()=>{
                                                         </div> 
 
                                                         <div className="web_hoveraddtocart">
-                                                            <button className="web_addtocartbutton">
+                                                            <button className="web_addtocartbutton" onClick={()=>handleClick()}>
                                                                 Add to cart
                                                             </button>
                                                             <div className="web_wishlist">
@@ -289,7 +289,7 @@ const  Lifestyle= ()=>{
                                                         </div> 
 
                                                         <div className="web_hoveraddtocart">
-                                                            <button className="web_addtocartbutton">
+                                                            <button className="web_addtocartbutton" onClick={()=>handleClick()}>
                                                                 Add to cart
                                                             </button>
                                                             <div className="web_wishlist">
@@ -370,7 +370,7 @@ const  Lifestyle= ()=>{
                                                         </div> 
 
                                                         <div className="web_hoveraddtocart">
-                                                            <button className="web_addtocartbutton">
+                                                            <button className="web_addtocartbutton" onClick={()=>handleClick()}>
                                                                 Add to cart
                                                             </button>
                                                             <div className="web_wishlist">
@@ -623,7 +623,7 @@ const  Lifestyle= ()=>{
                                                     </div>
 
                                                     <div className="webhoveraddtocart">
-                                                    <button className="webaddtocartbutton">
+                                                    <button className="webaddtocartbutton" onClick={()=>handleClick()}>
                                                         Add to cart
                                                     </button>
                                                     <div className="webwishlist">
@@ -706,7 +706,7 @@ const  Lifestyle= ()=>{
                                                     </div>
 
                                                     <div className="webhoveraddtocart">
-                                                    <button className="webaddtocartbutton">
+                                                    <button className="webaddtocartbutton" onClick={()=>handleClick()}>
                                                         Add to cart
                                                     </button>
                                                     <div className="webwishlist">

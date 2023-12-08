@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import axios from "axios";
 import "../development/Webdevelop.css"
-
+import { NavLink } from "react-router-dom";
 import TeachingRoute from "./TeachingRoute";
 
 const Science = ()=>{
@@ -391,26 +391,13 @@ const Science = ()=>{
 
             <div className="tablecontainer">
                 <h1>Popular topics</h1>
-                <table>
-                   
-                    <thead>
-                        <tr>
-                            <th>Web development</th>
-                            <th>React js</th>
-                            <th>CSS</th>
-                            <th>ASP.NET Core</th>
-                            <th>Redux Framework</th>
-                        </tr>
-                        <br/>
-                        <tr>
-                            <th>JavaScript</th>
-                            <th>Angular</th>
-                            <th>Node.Js</th>
-                            <th>Typescript</th>
-                            <th>Next.js</th>
-                        </tr>
-                    </thead>
-                </table>
+                <div className="populartopics">
+                    <div><NavLink to="/teaching/engineering" className="nav">Engneering </NavLink></div>
+                    <div><NavLink to="/teaching/socialscience" className="nav">Social Science</NavLink></div>
+                    <div><NavLink to="/teaching/math" className="nav">  Math </NavLink></div>
+                    <div><NavLink to="/teaching/science" className="nav">Science</NavLink></div>
+                    <div><NavLink to="/teaching/teachertraining" className="nav">Teacher Training</NavLink></div>
+                </div>
             </div>
             {/* popularInstructor */}
             <div className="popularInstructor">

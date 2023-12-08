@@ -899,14 +899,14 @@
     align-items: center;
     border: 2px solid black;
     text-align: center;
+    position: relative;
   }
- .searchinput{
-  height: 4vh;
-  width: 43vw;
-  border-radius: 20px;
-  text-align: center;
-  border: 0px solid white;
- }
+  .search_res{
+    position:absolute;
+    right:37vw;
+    top:4vh;
+  }
+
  .cartcolor{
   color:black;
  }
@@ -1431,18 +1431,7 @@ display: flex;
 li i{
   font-size: 20px;
 }
-/* .loginbtn{
-  font-size: 14px;
-  color: lavender;
-  background-color: rgb(181, 205, 214);
-  border: 3px solid rgb(75, 75, 144);
-}
-.signupbtn{
-font-size: 14px;
-color: white;
-background-color: rgb(190, 160, 225);
-border: 3px solid rgb(75, 75, 144);
-} */
+
 
 .navlinkres{
   display:block;
@@ -1451,13 +1440,13 @@ border: 3px solid rgb(75, 75, 144);
 }
 .listres{
   display:block;
- 
-  border-bottom:4px solid lightcyan;
+  
+  border-bottom:2px solid navy;
   text-align: center;
-  background-color: rgb(139, 157, 163)
+  /* background-color: rgb(139, 157, 163) */
 }
 .listres .navlinkRes{
-  background-color: rgb(139, 157, 163);
+  /* background-color: rgb(139, 157, 163); */
   color:white;
 }
 /* Style for the mobile menu icon */
@@ -1476,6 +1465,16 @@ border: 3px solid rgb(75, 75, 144);
 
 
 @media screen and (min-width:300px) and (max-width: 667px) {
+  .loginbtn , .signupbtn{
+    display: none;
+  }
+  .udemyLogo {
+      /* border: 2px solid black; */
+      position: absolute;
+      top:2vh;
+      left:24vw;
+      width: 20vw;;
+  } 
   .imgdiv{
     display: block;
   }
@@ -1483,23 +1482,35 @@ border: 3px solid rgb(75, 75, 144);
     display: none;
   }
   .searchbar{
-    display:block;
+  
+    display: block;
+    position: absolute;
+    right: 14vw;
+  }
+  .search_res{
+    display: block;
+    position: absolute;
+    right: 15vw;
+    top:4vh;
   }
   .tooltip{
     display:none;
   }
   .addtoCarticon{
     display: block;
-    background-color: aqua;
+    position: absolute;
+    right: 3vw;
+    /* background-color: aqua; */
+    font-size: 20px;
     
   }
   .cartcolor{
     color:black;
   }
-  .udemyLogores{
+  /* .udemyLogores{
         width:12vw;
         height: 12vh;
-  }
+  } */
   .resicondiv{
     width: 100vw;
     border:2px solid black;
@@ -1520,7 +1531,7 @@ border: 3px solid rgb(75, 75, 144);
   flex-direction: row;
   width:100%;
  
-  /* border: 2px solid green; */
+  border: 2px solid green;
 }
 
 .linkParent{
@@ -1532,19 +1543,24 @@ border: 3px solid rgb(75, 75, 144);
 .navbar-listResponsive {
   display: block;
   position: absolute;
-  top: 60px; /* Adjust as needed */
+  top: 10vh; /* Adjust as needed */
   left: 0;
   z-index: 1;
   padding: 10px;
   height: auto;
   cursor:pointer;
   display: block;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(10, 9, 9);
+  background-color: white;
+  width:70%;
+  height: 85vh;
+  line-height: 6vh;
 }
-.display {
-  display: block;
-  background-color: gray;
+.business_res , .finance_res , .it_software_res , .Design_res ,
+.Marketing_res , .LifeStyle_res , .Video_res , .music_res , .Teaching_res , .mostpopular{
+  border-bottom: 2px solid lightgray;
 }
+
 .hambergerlinksShows {
   display: block;
   cursor: pointer;
@@ -1561,11 +1577,12 @@ border: 3px solid rgb(75, 75, 144);
 
 .navlinkRes{
   color:black;
-  background-color:rgb(192, 41, 41); 
+  /* background-color:rgb(192, 41, 41);  */
   text-decoration: none;
   font-size: 22px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   z-index: 3;
+
 }
 
 
@@ -1574,19 +1591,292 @@ border: 3px solid rgb(75, 75, 144);
   cursor: pointer;
   height: 100%;
   /* border:2px solid red; */
-  display: block;
-  justify-content: space-around;
-  /* align-items: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:8vw;
+  font-size: 34px;
 }
-.listhide{
+
+
+.business_res , .finance_res , .it_software_res 
+, .Design_res , .Marketing_res , .LifeStyle_res , .Video_res , .music_res , .Teaching_res
+
+{
+  /* border: 2px solid black; */
+  list-style-type: none;
+}
+.business_subroute_res li  , .subroute_finance_res li ,.subroute_It_res li 
+, .subroute_Design_res li,
+.subroute_Marketing_res li , .subroute_LifeStyle_res li , .subroute_Video_res li 
+,.subroute_music_res li , .subroute_Teaching_res li
+{
+  border-bottom: 2px solid lightgray;
+  width:100%;
+  list-style-type: none;
+  background-color: white;
+  line-height: 14vh;
+  /* border-bottom: 1px solid rgb(10, 9, 9); */
+  font-size: 18px;
+  
+}
+.business_subroute_res , .subroute_finance_res, .subroute_It_res
+, .subroute_Design_res
+, .subroute_Marketing_res , .subroute_LifeStyle_res , .subroute_Video_res , .subroute_music_res , .subroute_Teaching_res 
+{
+  height: 90vh;
+}
+.business_res:hover .bussiness_cover_res,
+.finance_res:hover .finance_cover_res,
+.it_software_res:hover .it_cover_res,
+.Design_res:hover .design_cover_res,
+.Marketing_res:hover .Marketing_cover_res,
+
+.LifeStyle_res:hover .LifeStyle_cover_res,
+.Video_res:hover .Video_cover_res,
+.music_res:hover .music_cover_res,
+.Teaching_res:hover .Teaching_cover_res
+
+ {
+  position: absolute;
+  left: 0vw;
+  width: 100%;
+  top: 0vh;
+  height: 80vh;
+  display: block;
+  list-style: none;
+  z-index: 3;
+  /* border: 2px solid black; */
+  list-style: none;
+  z-index: 2;
+}
+.bussiness_cover_res ,.finance_cover_res ,
+
+ .design_cover_res ,
+.LifeStyle_cover_res ,.Video_cover_res , .music_cover_res , .Teaching_cover_res
+ {
   display:none;
+  height: 85vh;
 }
-.listshow{
-  display: block;
+.it_cover_res , .Marketing_cover_res {
+  display: none;
+  height: 85vh;
 }
+
 }
 
 
 @media screen and (min-width:668px) and (max-width: 1180px) {
+  .loginbtn , .signupbtn{
+    display: none;
+  }
+  .udemyLogo {
+      /* border: 2px solid black; */
+      position: absolute;
+      top:2vh;
+      left:24vw;
+      width: 20vw;;
+  } 
+  .imgdiv{
+    display: block;
+  }
+  .categories_parent{
+    display: none;
+  }
+  .searchbar{
+    width:28vw;
+    display: block;
+    position: absolute;
+    right: 18vw;
+    font-size: 16px;
+  }
+  .search_res{
+    display: block;
+    position: absolute;
+    right: 20vw;
+    top:4vh;
+  }
+  .tooltip{
+    display:none;
+  }
+  .addtoCarticon{
+    display: block;
+    position: absolute;
+    right: 3vw;
+    /* background-color: aqua; */
+    font-size: 20px;
+    
+  }
+  .cartcolor{
+    color:black;
+  }
+  /* .udemyLogores{
+        width:12vw;
+        height: 12vh;
+  } */
+  .resicondiv{
+    width: 100vw;
+    border:2px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height:10vh;
+
+
+  }
+  .learnerparent{
+  display:none; 
+  }
+
+/* Style for the mobile menu icon when active */
+.iconsParent{
+  display:flex;
+  flex-direction: row;
+  width:100%;
+ 
+  border: 2px solid green;
+}
+
+.linkParent{
+  display: none;
+}
+.links{
+  display:none;
+}
+.navbar-listResponsive {
+  display: block;
+  position: absolute;
+  top: 10vh; /* Adjust as needed */
+  left: 0;
+  z-index: 1;
+  padding: 10px;
+  height: auto;
+  cursor:pointer;
+  display: block;
+  border: 1px solid rgb(10, 9, 9);
+  background-color: white;
+  width:70%;
+  height: 87vh;
+  line-height: 6vh;
+}
+.business_res , .finance_res , .it_software_res , .Design_res ,
+.Marketing_res , .LifeStyle_res , .Video_res , .music_res , .Teaching_res , .mostpopular, .learn_res{
+  border-bottom: 2px solid lightgray;
+  font-size: 30px;
+}
+
+.hambergerlinksShows {
+  display: block;
+  cursor: pointer;
+  text-align: center;
+}
+.hambergerlinksHide {
+  display: none;
+}
+
+
+.listres{
+  display: block;
+}
+
+.navlinkRes{
+  color:black;
+  /* background-color:rgb(192, 41, 41);  */
+  text-decoration: none;
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  z-index: 3;
 
 }
+
+
+/* menu icon */
+.display {
+  cursor: pointer;
+  height: 100%;
+  /* border:2px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:8vw;
+  font-size: 44px;
+}
+
+
+.business_res , .finance_res , .it_software_res 
+, .Design_res , .Marketing_res , .LifeStyle_res , .Video_res , .music_res , .Teaching_res
+
+{
+  /* border: 2px solid black; */
+  list-style-type: none;
+}
+.business_subroute_res li  , .subroute_finance_res li ,.subroute_It_res li 
+, .subroute_Design_res li,
+.subroute_Marketing_res li , .subroute_LifeStyle_res li , .subroute_Video_res li 
+,.subroute_music_res li , .subroute_Teaching_res li
+{
+  border-bottom: 2px solid lightgray;
+  width:100%;
+  list-style-type: none;
+  background-color: white;
+  line-height: 15vh;
+  /* border-bottom: 1px solid rgb(10, 9, 9); */
+  font-size: 30px;
+  
+}
+.business_subroute_res , .subroute_finance_res, .subroute_It_res
+, .subroute_Design_res
+, .subroute_Marketing_res , .subroute_LifeStyle_res , .subroute_Video_res , .subroute_music_res , .subroute_Teaching_res 
+{
+  height: 90vh;
+}
+.business_res:hover .bussiness_cover_res,
+.finance_res:hover .finance_cover_res,
+.it_software_res:hover .it_cover_res,
+.Design_res:hover .design_cover_res,
+.Marketing_res:hover .Marketing_cover_res,
+
+.LifeStyle_res:hover .LifeStyle_cover_res,
+.Video_res:hover .Video_cover_res,
+.music_res:hover .music_cover_res,
+.Teaching_res:hover .Teaching_cover_res
+
+ {
+  position: absolute;
+  left: 0vw;
+  width: 100%;
+  top: 0vh;
+  height: 90vh;
+  display: block;
+  list-style: none;
+  z-index: 3;
+  border: 2px solid black;
+  list-style: none;
+  z-index: 2;
+
+}
+.bussiness_cover_res ,.finance_cover_res ,
+
+ .design_cover_res ,
+.LifeStyle_cover_res ,.Video_cover_res , .music_cover_res , .Teaching_cover_res
+ {
+  display:none;
+  height: 85vh;
+}
+.it_cover_res , .Marketing_cover_res {
+  display: none;
+  height: 85vh;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
