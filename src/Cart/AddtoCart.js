@@ -7,7 +7,7 @@ import axios from "axios";
 const AddtoCart = () => {
 
  const [cart ,setCart] = useState([]);
- const navigate = useNavigate();
+
  console.log(cart);
   const [total,setTotal] = useState();
 
