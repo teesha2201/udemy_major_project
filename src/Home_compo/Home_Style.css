@@ -10,7 +10,7 @@
     align-items: center;
 }
 .home_img_first{
-    border:2px solid black;
+    /* border:2px solid black; */
     width:90%;
 }
 .home_text_msg{
@@ -381,7 +381,7 @@
     align-items: center;
     font-weight: bold;
     color:black ;
-   
+    background-color: rgb(147, 45, 202);
 }
 .fa-regular fa-heart{
    font-size: larger;
@@ -898,7 +898,7 @@ text-align: left;
        height: 44vh;
     }
     .home_third_div_parent{
-        border:2px solid rgb(124, 71, 71);
+        /* border:2px solid rgb(124, 71, 71); */
         width:100%;
         display: flex;
         justify-content: center;
@@ -974,7 +974,7 @@ text-align: left;
        
     }
     .cardContainer{
-        border:2px solid rgb(177, 76, 76);
+        /* border:2px solid rgb(177, 76, 76); */
         width: 80%;
     }
     .singleCard{
@@ -1015,7 +1015,7 @@ text-align: left;
     .Learners_title{
         width:80%;
         font-size: 24px;
-        border:2px solid black;
+        /* border:2px solid black; */
     }
     .cardrow1{
         border:2px solid black;
@@ -1116,7 +1116,7 @@ text-align: left;
     }
     .udemy_bussiness_parent .rightimg {
         width: 80%;
-        border:2px solid black;
+        /* border:2px solid black; */
        
     }
     .udemy_bussiness_parent .rightimg img{
@@ -1128,7 +1128,7 @@ text-align: left;
     }
     .principal .principal_inner_div{
         margin-top: 5%;
-        border:2px solid rgb(91, 88, 88);
+        /* border:2px solid rgb(91, 88, 88); */
         width: 80%;
         flex-direction: column;
         justify-content: center;
@@ -1149,7 +1149,7 @@ text-align: left;
     }
     .secondlastdiv{
         flex-direction: column;
-        border:2px solid black;
+        /* border:2px solid black; */
         /* width:100%; */
         display: flex;
         flex-direction: column;
@@ -1164,7 +1164,7 @@ text-align: left;
         align-items: center;
     }
     .secondlastdiv .imgparent img{
-        border:2px solid black;
+        /* border:2px solid black; */
         width:100%;
         /* display: none; */
 
@@ -1182,13 +1182,137 @@ text-align: left;
     }
     .parent_instructor .aboutinstructor{
         width:100%;
-        border:2px solid black;
+        /* border:2px solid black; */
         font-size: 20px;
     }
     .teachingbutton{
         width:100%;
         border:2px solid black;
     }
+    .singleCard:hover .cardhover1  {
+
+    
+        width:80vw;
+        position:absolute;
+        left:2vw;
+        top:10%;
+       ;
+    
+    }
+     .singleCard:hover .cardhover2{
+      
+        width:80vw;
+        position:absolute;
+        left:2vw;
+        top:10%;
+        
+    
+    }
+    .singleCard:hover .cardhover3{
+        
+       
+        width:80vw;
+        position:absolute;
+        right:2vw;
+        top:10%;
+      
+    
+    }
+    .singleCard:hover .cardhover4{
+    
+        width:80vw;
+        position:absolute;
+        right:2vw;
+        top:10%;
+     
+    
+    }
+    .singleCard1:hover .cardhover1  {
+
+        display: flex;
+        flex-direction: column;
+        width:80vw;
+        border:10px solid white;
+        min-height:20vh;
+        row-gap: 1vw;
+        position:absolute;
+        left:-9vw;
+        top:-2vh;
+        background-color: white;
+        box-shadow: 5px 5px 10px rgb(224, 222, 222);
+        z-index:4;
+    
+    }
+    .singleCard1:hover .cardhover2{
+        
+        display: flex;
+        flex-direction: column;
+        width:80vw;
+        border:10px solid white;
+        min-height:20vh;
+        row-gap: 1vw;
+        position:absolute;
+        left:-4vw;
+        top:2vh;
+        background-color: white;
+        box-shadow: 5px 5px 10px rgb(224, 222, 222);
+        z-index:4;
+    
+    }
+    .singleCard1:hover .cardhover3{
+        
+        display: flex;
+        flex-direction: column;
+        width:80vw;
+        border:10px solid white;
+        min-height:20vh;
+        row-gap: 1vw;
+        position:absolute;
+        right:-9vw;
+        top:2vh;
+        background-color: white;
+        box-shadow: 5px 5px 10px rgb(224, 222, 222);
+        z-index:4;
+    
+    }
+    .singleCard1:hover .cardhover4{
+        
+        display: flex;
+        flex-direction: column;
+        width:80vw;
+        border:10px solid white;
+        min-height:20vh;
+        row-gap: 1vw;
+        position:absolute;
+        right:-9vw;
+        top:2vh;
+        background-color: white;
+        box-shadow: 1px 1px 1px rgb(224, 222, 222);
+        z-index:4;
+    
+    }
+    .cardhover .bestseller{
+        /* color: black; */
+        background-color: rgb(212, 212, 51);
+    
+        width:18vw;
+        height: 5vh;
+    }
+    .cardhover .updatedtext{
+        font-size: 14px;
+        color:green;
+        
+    }
+     .updatedate{
+        font-size: 13px;
+        color:darkgreen;
+        font-weight: bold;
+        width:40%;
+       
+    }
+    .wishlist{
+        width:40px;
+        height: 40px;}
 }
 /* ******************************tab-view***************************** */
 @media screen and (min-width:668px) and (max-width:1180px)
@@ -1228,7 +1352,7 @@ text-align: left;
           display: none;
       }
       .inner_div_first{
-          border:2px solid black;
+          /* border:2px solid black; */
           width:100%;
   
       }
@@ -1291,7 +1415,7 @@ text-align: left;
          
       }
       .cardContainer{
-          border:2px solid rgb(177, 76, 76);
+          /* border:2px solid rgb(177, 76, 76); */
           width: 80%;
       }
       .singleCard{
@@ -1357,14 +1481,14 @@ text-align: left;
             font-size: 24px;
       }
       .cardrow1{
-          border:2px solid black;
+          /* border:2px solid black; */
           flex-direction: column;
           width: 100vw;
           justify-content: center;
           align-items: center;
       }
       .cardContainer2{
-          border:2px solid black;
+          /* border:2px solid black; */
           width: 100vw;
       }
       .singleCard1{
@@ -1377,7 +1501,7 @@ text-align: left;
       }
       .carddetails{
           width: 100%;
-          border:2px solid black;
+          /* border:2px solid black; */
       }
       .top_categories{
           border:2px solid black;
