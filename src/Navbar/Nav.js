@@ -520,7 +520,7 @@ const  Nav=()=> {
                     <div className="dropdown">
                         <div className="innerdrop">
                           <p className="nameicon">
-                          {/* {username.slice(0,1)} */}
+                           {username.slice(0,1)} 
                           </p>
                           <div className="emailnamediv">
                             <p >
