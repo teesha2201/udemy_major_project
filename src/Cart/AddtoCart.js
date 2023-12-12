@@ -22,12 +22,12 @@ const AddtoCart = () => {
     cart.map((item)=>amount+=item.price)
     setTotal(amount);
   },[cart])
-   const handleRemove = async(id)=>{
-    await axios.post("https://udemy-backend-server.onrender.com/udemy/deleteitem",{id:id});
-    alert("cart has been removed successfully");
-    // navigate(-1);
+  //  const handleRemove = async(id)=>{
+  //   await axios.post("https://udemy-backend-server.onrender.com/udemy/deleteitem",{id:id});
+  //   alert("cart has been removed successfully");
+   
 
-   }
+  //  }
  
  
   //payment integration
@@ -86,7 +86,7 @@ const AddtoCart = () => {
                       <p><b>Price: </b><i class="fa-solid fa-indian-rupee-sign"></i>{item.price}</p>
                       <p><b>Course Update: </b> {item.updated_date}</p>
                       <p><b>Course duration:</b> {item.total_hrs}</p>
-                      <button className="removebtn" onClick={()=>handleRemove(item.id)}>Remove Item</button>
+                      {/* <button className="removebtn" onClick={()=>handleRemove(item.id)}>Remove Item</button> */}
                    </div>
                    {/* remove button */}
                 </div>

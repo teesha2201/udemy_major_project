@@ -412,11 +412,11 @@ const Bussiness = ()=>{
             <div className="tablecontainer">
                 <h1>Popular topics</h1>
                 <div className="populartopics">
-                    <div> <NavLink to="/bussiness/communication" className="nav">Communication</NavLink></div>
-                    <div><NavLink to="/bussiness/management" className="nav">Management</NavLink></div>
-                    <div><NavLink to="/bussiness/bussiness_strategy" className="nav">Bussiness Strategy</NavLink></div>
-                    <div><NavLink to="/bussiness/operation" className="nav">Operations</NavLink></div>
-                    <div><NavLink to="/bussiness/human_resources" className="nav">Human Resources</NavLink></div>
+                    <div> <NavLink to="/bussiness/communication" >Communication</NavLink></div>
+                    <div><NavLink to="/bussiness/management" >Management</NavLink></div>
+                    <div><NavLink to="/bussiness/bussiness_strategy" >Bussiness Strategy</NavLink></div>
+                    <div><NavLink to="/bussiness/operation" >Operations</NavLink></div>
+                    <div><NavLink to="/bussiness/human_resources" >Human Resources</NavLink></div>
                 </div>
                
             </div>

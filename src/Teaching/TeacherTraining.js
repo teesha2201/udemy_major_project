@@ -6,7 +6,7 @@ import TeachingRoute from "./TeachingRoute";
 
 const TeacherTraining = ()=>{
     const [music,setMusic] = useState([])
- 
+    const [cart,setCart] = useState()
     useEffect(()=>{
      
           axios.get('https://udemy-backend-server.onrender.com/udemy/getdatafromstore')
@@ -16,7 +16,34 @@ const TeacherTraining = ()=>{
               .catch((err)=>console.log(err))
         
         },[])
-    
+        useEffect(()=>{
+     
+            axios.get('https://udemy-backend-server.onrender.com/udemy/getdatafromstore')
+                .then((res)=>{setMusic(res.data);
+                  console.log(res.data)    
+              })
+                .catch((err)=>console.log(err))
+          
+          },[])
+          useEffect(()=>{
+              axios.get('https://udemy-backend-server.onrender.com/udemy/getaddtocart')
+              .then(res=>setCart(res.data))
+              .catch((err)=>console.log(err))
+          },[]) 
+          // console.log(cart)
+          const handleClick = async(item)=>{
+              const findcart =  cart && cart.find((items)=>items.id===item.id);
+              console.log(findcart)
+              if(findcart){
+                  alert('Item is already in cart')
+              }
+             else{
+              console.log(item.id)
+              await axios.post("https://udemy-backend-server.onrender.com/udemy/addtocart",item)
+              alert("Item has successfully added in your cart")
+  
+             }
+      }
     return(
        <>   
            <TeachingRoute />
@@ -100,7 +127,7 @@ const TeacherTraining = ()=>{
                                                         </div> 
 
                                                         <div className="web_hoveraddtocart">
-                                                            <button className="web_addtocartbutton">
+                                                            <button className="web_addtocartbutton" onClick={()=>handleClick(item)}>
                                                                 Add to cart
                                                             </button>
                                                             <div className="web_wishlist">
@@ -181,7 +208,7 @@ const TeacherTraining = ()=>{
                                                         </div> 
 
                                                         <div className="web_hoveraddtocart">
-                                                            <button className="web_addtocartbutton">
+                                                            <button className="web_addtocartbutton" onClick={()=>handleClick(item)}>
                                                                 Add to cart
                                                             </button>
                                                             <div className="web_wishlist">
@@ -262,7 +289,7 @@ const TeacherTraining = ()=>{
                                                         </div> 
 
                                                         <div className="web_hoveraddtocart">
-                                                            <button className="web_addtocartbutton">
+                                                            <button className="web_addtocartbutton" onClick={()=>handleClick(item)}>
                                                                 Add to cart
                                                             </button>
                                                             <div className="web_wishlist">
@@ -343,7 +370,7 @@ const TeacherTraining = ()=>{
                                                         </div> 
 
                                                         <div className="web_hoveraddtocart">
-                                                            <button className="web_addtocartbutton">
+                                                            <button className="web_addtocartbutton" onClick={()=>handleClick(item)}>
                                                                 Add to cart
                                                             </button>
                                                             <div className="web_wishlist">
@@ -597,7 +624,7 @@ const TeacherTraining = ()=>{
                                                     </div>
 
                                                     <div className="webhoveraddtocart">
-                                                    <button className="webaddtocartbutton">
+                                                    <button className="webaddtocartbutton" onClick={()=>handleClick(item)}>
                                                         Add to cart
                                                     </button>
                                                     <div className="webwishlist">
@@ -680,7 +707,7 @@ const TeacherTraining = ()=>{
                                                     </div>
 
                                                     <div className="webhoveraddtocart">
-                                                    <button className="webaddtocartbutton">
+                                                    <button className="webaddtocartbutton" onClick={()=>handleClick(item)}>
                                                         Add to cart
                                                     </button>
                                                     <div className="webwishlist">
