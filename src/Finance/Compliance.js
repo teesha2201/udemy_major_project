@@ -17,7 +17,7 @@ const Compliance= ()=>{
         
         },[])
         useEffect(()=>{
-            axios.get('http://localhost:4005/udemy/getaddtocart')
+            axios.get('https://udemy-backend-server.onrender.com/udemy/getaddtocart')
             .then(res=>setCart(res.data))
             .catch((err)=>console.log(err))
         },[]) 
@@ -30,7 +30,7 @@ const Compliance= ()=>{
             }
            else{
             console.log(item.id)
-            await axios.post("http://localhost:4005/udemy/addtocart",item)
+            await axios.post("https://udemy-backend-server.onrender.com/udemy/addtocart",item)
             alert("Item has successfully added in your cart")
 
            }
