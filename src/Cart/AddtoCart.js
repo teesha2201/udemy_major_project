@@ -143,7 +143,7 @@ const AddtoCart = () => {
         const changehandle=async(itemid)=>{
           console.log(itemid)
          try{
-          await axios.post("http://localhost:4005/udemy/deleteitem",{id:itemid})
+          await axios.post("https://udemy-backend-server.onrender.com/udemy/deleteitem",{id:itemid})
          alert("cart has been removed successfully");
          navigate(-1)
          }
