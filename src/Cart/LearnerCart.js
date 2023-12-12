@@ -46,7 +46,7 @@ const LearnerCart =()=>{
                         {item.rating}
                         </p>
                       
-                      <p><b>Price: </b><i class="fa-solid fa-indian-rupee-sign"></i>{item.price}</p>
+                      
                       <p><b>Course Update: </b> {item.updated_date}</p>
                       <p><b>Course duration:</b> {item.total_hrs}</p>
                       

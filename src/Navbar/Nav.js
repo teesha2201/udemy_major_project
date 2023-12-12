@@ -112,7 +112,7 @@ const  Nav=()=> {
     setSearchData(e.target.value)
 
   }
-  // console.log(searchData)
+  console.log(searchData)
   const [search, setSearch] = useState("");
 
 
@@ -122,7 +122,7 @@ const  Nav=()=> {
       .then((response) =>setSearch(response.data))
       .catch((error) => {console.error("Error fetching search results:", error);});
     },[searchData])
-    console.log(search)
+    // console.log(search)
     const searchres =()=>{
       console.log(search)
       navi("/search",{state:search})
