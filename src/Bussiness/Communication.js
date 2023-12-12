@@ -278,7 +278,7 @@ const Communication = ()=>{
                                                         </div> 
 
                                                         <div className="web_hoveraddtocart">
-                                                            <button className="web_addtocartbutton">
+                                                            <button className="web_addtocartbutton"  onClick={()=>handleClick(item)}>
                                                                 Add to cart
                                                             </button>
                                                             <div className="web_wishlist">
@@ -612,7 +612,7 @@ const Communication = ()=>{
                                                     </div>
 
                                                     <div className="webhoveraddtocart">
-                                                    <button className="webaddtocartbutton">
+                                                    <button className="webaddtocartbutton"  onClick={()=>handleClick(item)}>
                                                         Add to cart
                                                     </button>
                                                     <div className="webwishlist">
