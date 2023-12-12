@@ -154,9 +154,9 @@ const AddtoCart = () => {
        
       
 
-
+ //payment integration
   const makePayment = async () => {
-    const stripe = await loadStripe("your_stripe_public_key");
+    const stripe = await loadStripe("pk_test_51OFcxhSJ9imTpFOMrr7cLjkKItk8MT04D4U3l2L9diYzzh7XSJ4IGUgyk7EA1JjKzVm1gm51ePzgHGkXk3zaTweX00CcmdCw7g");
     const body = {
       products: cart,
     };
@@ -198,6 +198,8 @@ const AddtoCart = () => {
       
       // Delete the cart only after the payment is successful
       axios.delete("https://udemy-backend-server.onrender.com/udemy/cartdelete");
+      
+
     }
   }, [paymentMade, cart]);
 
