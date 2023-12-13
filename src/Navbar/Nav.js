@@ -118,7 +118,7 @@ const  Nav=()=> {
 
 
     useEffect(()=>{
-      axios.get(`http://localhost:4005/udemy/search?page=${searchData}`)
+      axios.get(`https://udemy-backend-server.onrender.com/udemy/search?page=${searchData}`)
       .then((response) =>setSearch(response.data))
       .catch((error) => {console.error("Error fetching search results:", error);});
     },[searchData])
